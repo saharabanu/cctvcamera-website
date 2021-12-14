@@ -4,6 +4,7 @@ import {
   BrowserRouter, Route, Routes
 } from "react-router-dom";
 import './App.css';
+import Dashboard from './components/Dashboard/Dashboard/Dashboard';
 import AddProduct from './components/Home/AddProduct/AddProduct';
 import Home from './components/Home/Home/Home';
 import Login from './components/Login/Login/Login';
@@ -24,6 +25,8 @@ function App() {
       <Route path="/home" element={<Home/>}>
        </Route>
       <Route path="/addProduct" element={<AddProduct/>}>
+       </Route>
+      <Route path="/dashboard" element={<Dashboard/>}>
        </Route>
       <Route path="/login" element={<Login/>}>
        </Route>

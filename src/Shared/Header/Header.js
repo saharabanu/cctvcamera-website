@@ -1,10 +1,12 @@
 import React from 'react';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
+import useAuth from '../../Hooks/useAuth';
 import './Header.css';
 
 
 const Header = () => {
+    const {user,logOut} = useAuth()
     
     const activeStyle = {
         fontWeight: "bold",
@@ -30,20 +32,19 @@ const Header = () => {
                         <NavLink to="/login" className="fs-4 pt-1" activeStyle={activeStyle}>
                             Login
                         </NavLink>
-                        {/* <NavLink to="/cycles" className="fs-4 pt-1" activeStyle={activeStyle}>
+                         {/* <NavLink to="/cycles" className="fs-4 pt-1" activeStyle={activeStyle}>
                             Explore
-                        </NavLink>
+                        </NavLink> */}
                         {user.email && <NavLink to="/dashboard" className="fs-4 pt-1" activeStyle={activeStyle}>
                             Dashboard
                         </NavLink>
                         }
 
 
-                        {user.email ? <>    <span className=" text-light pt-2 fs-5 px-2 fw-lighter "> <Image className="user-picture" src={photoURL} roundedCircle /> {displayName}</span>
-                            <Button variant="warning" onClick={logout} className="m-1 text-white">Log Out <i className="fas fa-sign-out-alt ps-2"></i></Button>
-                        </>
-                            :
-                            <NavLink to="/login"><Button variant="outline-info mt-1">Log In <i className="fas fa-sign-in-alt ps-2"></i></Button></NavLink>} */}
+                         {user?.email &&  
+                            <Button variant="warning" onClick={logOut} className="m-1 text-white">Log Out </Button>
+                         }
+                       
 
                     </Nav>
                 </Navbar.Collapse>
