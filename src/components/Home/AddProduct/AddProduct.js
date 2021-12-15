@@ -7,13 +7,26 @@ const AddProduct = () => {
     const { register, handleSubmit,reset } = useForm();
 
     const onSubmit = data =>{
-        console.log(data)
-        reset();
+        fetch('http://localhost:5000/products',{
+            method:"POST",
+            headers:{
+                'content-type': 'application/json'
+            },
+            body:JSON.stringify(data)
+        })
+        .then(res=>res.json())
+        .then(data=>{
+            if(data.insertedId){
+                alert('product added successfully')
+            }
+            console.log(data)
+            reset();
+        })
     }
     return (
         <div className="add-service">
             <h2>Add A Product</h2>
-            <form onSubmit={handleSubmit} className="dashboard-from ms-3">
+            <form onSubmit={handleSubmit(onSubmit)} className="dashboard-from ms-3">
 
                         <input placeholder="Product Name" type="text" {...register("name", { required: true })} />
                         <input placeholder="Price" type="number"{...register("price", { required: true, min: "0", max: "999999" })} />
