@@ -1,0 +1,13 @@
+.blog-img1{
+    background-image: url('../../../img/blog1.jpg');
+
+    height: 300px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin-top:20px;
+   
+    
+}

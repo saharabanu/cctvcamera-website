@@ -1,0 +1,53 @@
+
+ .part-1-img{
+     background-image: url('https://n.foxdsgn.com/custo/wp-content/uploads/2019/12/shutterstock_1259412769.jpg');
+
+     height: 200px;
+     width: 100%;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     position: relative;
+     /* margin-top:20px; */
+     margin-top:-50px;
+     
+ }
+ .part-2-img{
+     background-image: url('https://n.foxdsgn.com/custo/wp-content/uploads/2020/02/shutterstock_555325381.jpg');
+
+     height: 200px;
+     width: 100%;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     position: relative;
+     /* margin-top:20px; */
+     margin-top:-50px;
+     
+ }
+ .part-3-img{
+     background-image: url('https://n.foxdsgn.com/custo/wp-content/uploads/2020/02/shutterstock_676823536.jpg');
+
+     height: 200px;
+     width: 100%;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     position: relative;
+     /* margin-top:20px; */
+     margin-top:-50px;
+     
+ }
+ .part-4-img{
+     background-image: url('https://n.foxdsgn.com/custo/wp-content/uploads/2020/02/shutterstock_1272260824.jpg');
+
+     height: 200px;
+     width: 100%;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     position: relative;
+     margin-top:-50px;
+     
+ }
+ 

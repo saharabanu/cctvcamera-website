@@ -6,10 +6,12 @@ import {
 import './App.css';
 import Dashboard from './components/Dashboard/Dashboard/Dashboard';
 import AddProduct from './components/Home/AddProduct/AddProduct';
+import Details from './components/Home/Details/Details';
 import Home from './components/Home/Home/Home';
 import Login from './components/Login/Login/Login';
 import Register from './components/Login/Register/Register';
 import NotFound from './components/NotFound/NotFound';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import AuthProvider from './contexts/AuthProvider';
 
 
@@ -27,6 +29,8 @@ function App() {
       {/* <Route path="/products" element={<Products/>}>
        </Route> */}
       <Route path="/addProduct" element={<AddProduct/>}>
+       </Route>
+      <Route path="/details/:id" element={<PrivateRoute><Details/></PrivateRoute>}>
        </Route>
       <Route path="/dashboard" element={<Dashboard/>}>
        </Route>

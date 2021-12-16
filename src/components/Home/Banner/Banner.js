@@ -29,17 +29,19 @@ const Banner = () => {
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
+  
     <img
       className="d-block w-100"  style={{height:'400px'}}
       src="https://i.ibb.co/k1C07FJ/Camera-2.jpg
       "
       alt="Third slide"
     />
-
     <Carousel.Caption>
       <h2>WHOLE HOME PROTECTION</h2>
       <p>All monitored 24/7 by professional ready to dispatch police.</p>
     </Carousel.Caption>
+
+    
   </Carousel.Item>
 </Carousel>
         </div>

@@ -32,9 +32,8 @@ const AddProduct = () => {
                         <input placeholder="Price" type="number"{...register("price", { required: true, min: "0", max: "999999" })} />
                         <input placeholder="IMG Url Only" type="text" {...register("img", { required: true })} />
                         <textarea placeholder="Description" type="text" {...register("description", { required: true })} />
-                        <textarea placeholder="Weight" type="number" {...register("weight", { required: true })} />
-                        <textarea placeholder="Dimensions" type="number" {...register("dimension", { required: true })} />
-                        <textarea placeholder="category" type="text" {...register("category", { required: true })} />
+                        <textarea placeholder="Size like large ,small" type="text" {...register("size", { required: true })} />
+                        
 
                         <Button type="submit" variant="dark">Add Product</Button>
                     </form>
