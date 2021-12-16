@@ -40,8 +40,7 @@ const Review = () => {
                         <input placeholder="Photo" type="text"{...register("img", { required: true })} />
                         <input placeholder="Rating" type="number"{...register("rating", { required: true, min: "0", max: "5" })} />
 
-                        <textarea placeholder="Description" type="text" {...register("description", { required: true })} />
-
+                        <textarea placeholder=" Write Comment" type="text" {...register("comment", { required: true })} />
                         <Button type="submit" variant="dark">Add Review</Button>
                     </form>
                 </Col>

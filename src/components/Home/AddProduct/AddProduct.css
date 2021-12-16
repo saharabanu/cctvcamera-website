@@ -1,9 +1,12 @@
-.dashboard-from input,textarea, Button{
-    display: block;
+.dashboard-from input,Button{
+display: block;
 width: 50%;
 margin: 10px 0;
 padding: 5px 2px;
 
+}
+.dashboard-from textarea{
+    width:50%;
 }
 .add-service form{
     display:flex;
