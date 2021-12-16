@@ -9,7 +9,7 @@ const useFirebase =()=>{
     const [user,setUser] = useState({});
     const [isLoading,setIsLoading] = useState(true);
     const [error,setError] = useState('');
-    // const [admin, setAdmin] = useState(false);
+    const [admin, setAdmin] = useState(false);
 
     const auth = getAuth();
     const googleProvider = new GoogleAuthProvider();
@@ -20,13 +20,15 @@ const useFirebase =()=>{
         createUserWithEmailAndPassword(auth, email, password)
   .then((result) => {
     setError('');
-    const newUser = {email,displayName:name};
+    const newUser = {email,displayName:name };
     setUser(newUser);
     // // save user to database 
-    // saveUser(email,name,'POST');
+    saveUser(email,name,'POST');
+    
     // send name to firebase after creation 
     updateProfile(auth.currentUser, {
-      displayName: name, 
+      displayName: name,
+      
     }).then(() => {
       
     }).catch((error) => {
@@ -47,7 +49,7 @@ const useFirebase =()=>{
         signInWithEmailAndPassword(auth, email, password)
   .then((result) => {
     const destination = location?.state?.from || '/';
-    navigate(destination)
+    navigate(destination);
     setError('');
   })
   .catch((error) => {
@@ -64,9 +66,9 @@ const useFirebase =()=>{
       .then((result) => {
     
     const user = result.user;
-    // saveUser(user.email, user.displayName, 'PUT')
+    saveUser(user.email, user.displayName, 'PUT')
     const destination = location?.state?.from || '/';
-    navigate(destination)
+    navigate(destination);
     setError('');
 
     
@@ -75,6 +77,9 @@ const useFirebase =()=>{
   })
   .finally(()=>setIsLoading(false));
     }
+
+
+  
 
     // observer user state 
     useEffect(()=>{
@@ -90,11 +95,11 @@ const useFirebase =()=>{
           return ()=> unsubscribed;
     },[]);
 
-    // useEffect(()=>{
-    //   fetch(`https://glacial-fortress-22682.herokuapp.com/users/${user.email}`)
-    //   .then(res=>res.json())
-    //   .then(data=> setAdmin(data.admin))
-    // },[user.email])
+    useEffect(()=>{
+      fetch(`http://localhost:5000/users/${user.email}`)
+      .then(res=>res.json())
+      .then(data=> setAdmin(data.admin))
+    },[user.email])
 
 
 
@@ -107,20 +112,23 @@ const useFirebase =()=>{
           })
           .finally(()=>setIsLoading(false));
     }
-    // const saveUser =(email,displayName, method)=>{
-    //   const user ={email,displayName};
-    //   fetch('https://glacial-fortress-22682.herokuapp.com/users',{
-    //     method: method,
-    //     headers:{'content-type':'application/json'},
-    //     body:JSON.stringify(user)
-    //   })
-    //   .then()
+  
 
-    // }
+
+    const saveUser =(email,displayName, method)=>{
+      const user ={email,displayName};
+      fetch('http://localhost:5000/users',{
+        method: method,
+        headers:{'content-type':'application/json'},
+        body:JSON.stringify(user)
+      })
+      .then()
+
+    }
 
     return {
         user,
-        // admin,
+        admin,
         error,
         isLoading,
         registerUser,

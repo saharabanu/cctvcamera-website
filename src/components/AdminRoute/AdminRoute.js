@@ -10,7 +10,7 @@ const AdminRoute = ({ children, ...rest }) => {
     if (user.email && admin) {
         return children;
     }
-    return <Navigate to="/login" state={{ from: location }} />;
+    return <Navigate to="/" state={{ from: location }} />;
 
 
 };

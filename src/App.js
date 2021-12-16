@@ -23,6 +23,8 @@ import AuthProvider from './contexts/AuthProvider';
 
 
 function App() {
+
+  
   
   return (
     <div className="App">
@@ -34,26 +36,28 @@ function App() {
        </Route>
       <Route path="/home" element={<Home/>}>
        </Route>
+      <Route path="/makeAdmin" element={<MakeAdmin/>}>
+       </Route>
       
       <Route path="/addProduct" element={<AddProduct/>}>
        </Route>
       <Route path="/details/:id" element={<PrivateRoute><Details/></PrivateRoute>}>
        </Route>
       <Route path="/dashboard" element={<PrivateRoute><Dashboard/></PrivateRoute>}>
-      <Route path="/dashboard" element={ <MyOrders />}>
+      <Route path="/dashboard" element= {<Home/>}>
                             
                             </Route>
                             <Route path={`/dashboard/payment`} element={<Payment />}>
                                 
                             </Route>
-                            {/* <Route path={`/dashboard/myOrders`} element={<MyOrders />}>   
-                            </Route> */}
+                            <Route path={`/dashboard/myOrders`} element={<MyOrders />}>   
+                            </Route>
                             <Route path={`/dashboard/review`} element={<Review />}>   
                             </Route>
-                            <Route path={`/dashboard/allOrders`} element={ <AllOrders />}>
+                            <Route path={`/dashboard/allOrders`} element={<AdminRoute><AllOrders /></AdminRoute> }>
                                
                             </Route>
-                            <Route path={`/dashboard/addProduct`} element={<AdminRoute><AddProduct /></AdminRoute>}>
+                            <Route path={`/dashboard/addProduct`} element={<AdminRoute><AddProduct/></AdminRoute>}>
                                 
                             </Route>
                             <Route path={`/dashboard/makeAdmin`} element={<AdminRoute><MakeAdmin /></AdminRoute>}>
