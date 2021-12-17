@@ -11,7 +11,7 @@ const MakeAdmin = () => {
 
 
     const onSubmit = (data) => {
-        fetch("http://localhost:5000/users/admin", {
+        fetch("https://lit-badlands-25658.herokuapp.com/users/admin", {
           method: "PUT",
           headers: { 
             'authorization':`Bearer ${token}`,

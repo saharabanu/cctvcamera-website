@@ -21,7 +21,7 @@ const Review = () => {
     const handleReviewsToServer = () => {
         handleReviewModelClose()
         console.log(newReview)
-        axios.post('http://localhost:5000/reviews', newReview)
+        axios.post('https://lit-badlands-25658.herokuapp.com/reviews', newReview)
             .then(res => {
                 if (res.data.insertedId) {
                     alert("Congrats Your review has been added successfully.")

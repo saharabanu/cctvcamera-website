@@ -10,13 +10,13 @@ const ManageProducts = () => {
     const [allProducts, setAllProducts] = useState({});
 
     useEffect(() => {
-        axios.get('http://localhost:5000/products')
+        axios.get('https://lit-badlands-25658.herokuapp.com/products')
             .then(res => setAllProducts(res.data))
     }, [])
     const handleDeleteProduct = id => {
         const sure = window.confirm("are you sure to delete this ?");
         if (sure) {
-            axios.delete(`http://localhost:5000/productDelete/${id}`)
+            axios.delete(`https://lit-badlands-25658.herokuapp.com/productDelete/${id}`)
                 .then(res => {
                     if (res.data.deletedCount) {
                         alert("deleted successful");
@@ -27,7 +27,7 @@ const ManageProducts = () => {
         }
     }
     const getProductUpdate = id => {
-        axios.get(`http://localhost:5000/singleProduct/${id}`)
+        axios.get(`https://lit-badlands-25658.herokuapp.com/singleProduct/${id}`)
             .then(res => {
                 setSelectedProduct(res.data)
                 handleupdatingMOdalShow();
@@ -48,11 +48,11 @@ const ManageProducts = () => {
     const handleUpdateSubmit = (e) => {
         e.preventDefault();
         handleupdatingMOdalClose();
-        axios.put(`http://localhost:5000/products/${selectedProduct._id}`, selectedProduct)
+        axios.put(`https://lit-badlands-25658.herokuapp.com/products/${selectedProduct._id}`, selectedProduct)
             .then(res => {
                 if (res.data.modifiedCount > 0) {
                     alert("Product updated successfully")
-                    axios.get('http://localhost:5000/products')
+                    axios.get('https://lit-badlands-25658.herokuapp.com/products')
                         .then(res => setAllProducts(res.data))
 
 

@@ -20,11 +20,11 @@ const AllOrders = () => {
     const handleStatusUpdate = data => {
         const id = orderUpdate._id;
 
-        axios.put(`http://localhost:5000/orderStatusUpdate/${id}`, data)
+        axios.put(`https://lit-badlands-25658.herokuapp.com/orderStatusUpdate/${id}`, data)
             .then(res => {
                 if (res.data.modifiedCount) {
                     closeUpdateModal()
-                    axios.get('http://localhost:5000/orders')
+                    axios.get('https://lit-badlands-25658.herokuapp.com/orders')
                         .then(res => {
                             setAllOrders(res.data)
                             alert("Status  updated successful");
@@ -35,7 +35,7 @@ const AllOrders = () => {
     const handleOrderDelete = (id) => {
         const sure = window.confirm("are you sure to delete this ?");
         if (sure) {
-            axios.delete(`http://localhost:5000/orderDelete/${id}`)
+            axios.delete(`https://lit-badlands-25658.herokuapp.com/orderDelete/${id}`)
                 .then(res => {
                     if (res.data.deletedCount) {
                         alert("deleted successful");
@@ -46,12 +46,12 @@ const AllOrders = () => {
         }
     }
     useEffect(() => {
-        axios.get('http://localhost:5000/orders')
+        axios.get('https://lit-badlands-25658.herokuapp.com/orders')
             .then(res => setAllOrders(res.data))
     }, [])
     const handleOrderCatagories = category => {
 
-        axios.get(`http://localhost:5000/catagoriesOrder?status=${category}`)
+        axios.get(`https://lit-badlands-25658.herokuapp.com/catagoriesOrder?status=${category}`)
             .then(res => {
                 setAllOrders(res.data)
             })

@@ -17,13 +17,13 @@ const MyOrders = () => {
         setShowOrderDeleteModel(true)
     };
     useEffect(() => {
-        axios.get(`http://localhost:5000/myOrders/${user.email}`)
+        axios.get(`https://lit-badlands-25658.herokuapp.com/myOrders/${user.email}`)
             .then(res => setMyOrders(res.data))
     }, [user])
     const total = myOrders.reduce((previous, product) => previous + parseInt(product.price), 0);
     const deleteMyOrder = id => {
         handleOrderDeleteModelClose()
-        axios.delete(`http://localhost:5000/orderDelete/${id}`)
+        axios.delete(`https://lit-badlands-25658.herokuapp.com/orderDelete/${id}`)
             .then(res => {
                 if (res.data.deletedCount) {
                     alert("deleted successful");

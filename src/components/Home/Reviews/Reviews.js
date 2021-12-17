@@ -6,7 +6,7 @@ import Rating from 'react-rating';
 const Reviews = () => {
     const [allReviews, setAllReviews] = useState({});
     useEffect(() => {
-        axios.get('http://localhost:5000/reviews')
+        axios.get('https://lit-badlands-25658.herokuapp.com/reviews')
             .then(res => setAllReviews(res.data))
     }, [])
 

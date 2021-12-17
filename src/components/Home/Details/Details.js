@@ -28,13 +28,13 @@ const Details = () => {
         handleProductBuyModalShow();
     };
     useEffect(() => {
-        axios.get(`http://localhost:5000/products/${id}`)
+        axios.get(`https://lit-badlands-25658.herokuapp.com/products/${id}`)
             .then(res => setSelectedProduct(res.data))
     }, [id])
     const handleReviewsToServer = () => {
         handleProductBuyModalClose()
 
-        axios.post('http://localhost:5000/orders', BuyingProduct)
+        axios.post('https://lit-badlands-25658.herokuapp.com/orders', BuyingProduct)
             .then(res => {
                 if (res.data.insertedId) {
                     alert("Congrats Your order has been added successfully.")

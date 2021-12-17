@@ -7,7 +7,7 @@ import './Products.css';
 const Products = () => {
     const [products,setProducts] = useState([]);
     useEffect(()=>{
-        axios.get('http://localhost:5000/products')
+        axios.get('https://lit-badlands-25658.herokuapp.com/products')
             .then(res => setProducts(res.data))
        
     },[])
