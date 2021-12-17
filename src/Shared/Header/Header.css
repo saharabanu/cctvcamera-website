@@ -1,8 +1,31 @@
+.header-container{
+    /* background-color:dark; */
+    color:white;
+    /* padding:5px; */
+}
+.header-items{
+    list-style: none;
+    margin: 5px;
+    font-size: 20px;
+}
+.menu-items a{
+    text-decoration: none;
+    color:white;
+}
+
+
+
+
+
+
+
+
+/* 
 nav a{
     text-decoration: none;
     margin: 0 5px;
 color: white;
-    font-size: 18px;
+    font-size: 14px;
 }
 nav a:hover{
  border-bottom: 1px solid #0DCAF0;
@@ -10,4 +33,4 @@ nav a:hover{
 }
 .user-picture{
     height: 30px;
-}
+} */

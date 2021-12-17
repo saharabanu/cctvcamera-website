@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { Alert } from 'react-bootstrap';
 import { useForm } from "react-hook-form";
+import useAuth from '../../../Hooks/useAuth';
 
 const MakeAdmin = () => {
     const [success, setSuccess] = useState(false);
+    const {token} = useAuth()
   
     const { register, handleSubmit, reset } = useForm();
 
@@ -11,7 +13,9 @@ const MakeAdmin = () => {
     const onSubmit = (data) => {
         fetch("http://localhost:5000/users/admin", {
           method: "PUT",
-          headers: { "content-type": "application/json" },
+          headers: { 
+            'authorization':`Bearer ${token}`,
+            "content-type": "application/json" },
           body: JSON.stringify(data),
         })
           .then((res) => res.json())
@@ -28,7 +32,7 @@ const MakeAdmin = () => {
       };
     return (
         <div>
-        <h1>make admin</h1>
+        <h1>Make Admin</h1>
         <form onSubmit={handleSubmit(onSubmit)}>
           <input
             className="input-field w-25"
@@ -40,7 +44,7 @@ const MakeAdmin = () => {
           <br />
   
           <input
-            className="submit-btn btn btn-danger mt-3 border-0"
+            className="submit-btn btn btn-danger mt-3 border-0 w-25"
             type="submit"
             value="Make as Admin"
           />

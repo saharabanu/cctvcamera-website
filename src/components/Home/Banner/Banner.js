@@ -8,7 +8,7 @@ const Banner = () => {
   <Carousel.Item>
     <img
       className="d-block w-100"  style={{height:'400px'}}
-      src="https://i.ibb.co/k1C07FJ/Camera-2.jpg"
+      src="https://media.istockphoto.com/photos/tracking-graphs-and-surveillance-cameras-of-polymeric-micelles-drugs-picture-id1337413444?b=1&k=20&m=1337413444&s=170667a&w=0&h=ncxYSYSQjZTp8TFGg-7LuZ-8ZK1nkvhM9JyPNyX0cbE="
       alt="First slide"
     />
     <Carousel.Caption>
@@ -19,7 +19,7 @@ const Banner = () => {
   <Carousel.Item>
     <img
       className="d-block w-100"  style={{height:'400px'}}
-      src="https://i.ibb.co/zS6dptK/Camera-3.jpg"
+      src="https://media.istockphoto.com/photos/smartphone-and-surveillance-camera-picture-id1252848657?b=1&k=20&m=1252848657&s=170667a&w=0&h=hqfhxzlRVKQAgcpV3GdV4K8X1L-G0QS_BUByO1QBpVM="
       alt="Second slide"
     />
 

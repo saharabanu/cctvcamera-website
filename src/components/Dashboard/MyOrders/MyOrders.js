@@ -1,13 +1,14 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Button, Card, Col, Container, ListGroup, Modal, Row } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
 
 const MyOrders = () => {
     const { user } = useAuth();
     const [myOrders, setMyOrders] = useState([]);
     const [deleteOrder, SetDeleteOrder] = useState([])
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
     const [showOrderDeleteModel, setShowOrderDeleteModel] = useState(false);
 
     const handleOrderDeleteModelClose = () => setShowOrderDeleteModel(false);
@@ -31,9 +32,9 @@ const MyOrders = () => {
                 }
             })
     }
-    // const paymentPage = () => {
-    //     navigate('dashboard/pay')
-    // }
+    const paymentPage = () => {
+        navigate('/dashboard/payment')
+    }
     return (
 
         <Container className="pt-5">
@@ -108,7 +109,7 @@ const MyOrders = () => {
                             <p className="mb-0">Total : $ {(total).toFixed(2)}</p>
                             <hr className="my-2" />
                             <div className="text-end">
-                                {/* <Button variant="success" onClick={paymentPage}>Payment</Button> */}
+                                <Button variant="success" onClick={paymentPage}>Payment</Button>
                             </div>
                         </Col>
                     </Row>

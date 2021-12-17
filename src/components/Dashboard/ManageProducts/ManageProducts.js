@@ -48,11 +48,11 @@ const ManageProducts = () => {
     const handleUpdateSubmit = (e) => {
         e.preventDefault();
         handleupdatingMOdalClose();
-        axios.put(`https://obscure-depths-70319.herokuapp.com/products/${selectedProduct._id}`, selectedProduct)
+        axios.put(`http://localhost:5000/products/${selectedProduct._id}`, selectedProduct)
             .then(res => {
                 if (res.data.modifiedCount > 0) {
                     alert("Product updated successfully")
-                    axios.get('https://obscure-depths-70319.herokuapp.com/products')
+                    axios.get('http://localhost:5000/products')
                         .then(res => setAllProducts(res.data))
 
 
@@ -150,6 +150,18 @@ const ManageProducts = () => {
                                 onBlur={handleOnBlurProductForm}
 
                             />
+                        
+                        </Form.Group>
+                        <Form.Group className="mb-3" as={Col} md="12" controlId="exampleForm.ControlTextarea1">
+
+                            <Form.Control as="textarea"
+                                rows={3}
+                                defaultValue={selectedProduct.size}
+                                name="size"
+                                onBlur={handleOnBlurProductForm}
+
+                            />
+                        
                         </Form.Group>
                         <p className="text-center my-3"> <Button type="submit" variant="danger" className="banner-btn"> Update Product</Button></p>
                     </Form>

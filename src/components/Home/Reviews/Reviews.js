@@ -32,7 +32,7 @@ const Reviews = () => {
                                 fullSymbol="fas fa-star text-warning"
                                 readonly></Rating></p>
                             <Card.Text>
-                                {review.description.slice(0, 115)}.
+                                {review.description}
                             </Card.Text>
                         </Card.Body>
                     </Card>

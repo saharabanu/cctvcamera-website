@@ -1,9 +1,7 @@
 import React from 'react';
 import { Button, Col, Container, Image, Nav, Navbar, Row } from 'react-bootstrap';
-import { Helmet } from 'react-helmet';
 import { Link, Outlet } from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
-import MakeAdmin from '../MakeAdmin/MakeAdmin';
 import './Dashboard.css';
 
 
@@ -14,20 +12,20 @@ const Dashboard = () => {
     
     return (
         <div className="dashboard-bg">
-            <Helmet>
+            {/* <Helmet>
                 <meta charSet="utf-8" />
                 <title>Dashboard</title>
-            </Helmet>
+            </Helmet> */}
 
             <Row className="g-0  ">
                 <Col md={2} className="custom-dashboard-link" >
                     
                     <hr className="custom-hr" />
                     <Nav className="flex-column pb-3">
-                        {/* <Link to="/home"> <span><i className="fas fa-house-user me-2"></i></span> Home</Link> */}
+                        <Link to="/home"> <span><i className="fas fa-house-user me-2"></i></span> Home</Link>
                         
                             {!admin && <><h5 className='text-white'>Customer Dashboard</h5>
-                            <Link to="/dashboard"> <span><i className="fas fa-shopping-bag me-2"></i></span> Home</Link>
+                            <Link to=""> <span><i className="fas fa-shopping-bag me-2"></i></span>Dashboard</Link>
                             
                             <Link to={`/dashboard/myOrders`}> <span><i className="fab fa-cc-amazon-pay me-2"></i></span> My Orders</Link>
                             <Link to={`/dashboard/payment`}> <span><i className="fab fa-cc-amazon-pay me-2"></i></span> Payment</Link>
@@ -54,7 +52,7 @@ const Dashboard = () => {
                                     <Nav className="ms-auto pe-5">
 
                                         <span className=" pt-2 fs-5 px-2 fw-lighter "> <Image className="user-picture" src={photoURL} roundedCircle /> {displayName}</span>
-                                        <Button variant="warning" onClick={logOut} className="m-1 text-white">Log Out <i className="fas fa-sign-out-alt ps-2"></i></Button>
+                                        <Button variant="warning" onClick={logOut}  className="text-white">Log Out <i className="fas fa-sign-out-alt ps-2"></i></Button>
 
                                     </Nav>
                                 </Navbar.Collapse>
@@ -66,7 +64,7 @@ const Dashboard = () => {
                 </Col>
             </Row>
 
-            <MakeAdmin></MakeAdmin>
+            
        
 
         </div >

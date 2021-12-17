@@ -10,7 +10,7 @@ import Reviews from '../Reviews/Reviews';
 
 const Home = () => {
     return (
-        <div>
+        <div style={{backgroundColor:'#FFEBCD'}}>
             <Header></Header>
             <Banner></Banner>
            <AllFeatures></AllFeatures>

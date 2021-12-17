@@ -74,7 +74,7 @@ const Footer = () => {
                 </Row>
                 <hr />
                 <p className="fs-5 text-center">
-                    <i className="far fa-copyright pe-3"></i> 2021 Cycling – All rights reserved.
+                    <i className="far fa-copyright pe-3"></i> 2021 CCTv Camera – All rights reserved.
                 </p>
             </Container>
         </div>

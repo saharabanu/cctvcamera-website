@@ -23,9 +23,6 @@ import AuthProvider from './contexts/AuthProvider';
 
 
 function App() {
-
-  
-  
   return (
     <div className="App">
       <AuthProvider>
@@ -44,7 +41,7 @@ function App() {
       <Route path="/details/:id" element={<PrivateRoute><Details/></PrivateRoute>}>
        </Route>
       <Route path="/dashboard" element={<PrivateRoute><Dashboard/></PrivateRoute>}>
-      <Route path="/dashboard" element= {<Home/>}>
+      <Route path="/dashboard" >
                             
                             </Route>
                             <Route path={`/dashboard/payment`} element={<Payment />}>
