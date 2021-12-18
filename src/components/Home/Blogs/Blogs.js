@@ -5,7 +5,7 @@ import './Blogs.css';
 const Blogs = () => {
     return (
         <div className='blog-head'>
-            <h3>Latest Blog News</h3>
+            <h3 style={{color:'#d2691e'}}>Latest Blog News</h3>
             <div className="container">
                 <div className="row g-4">
                     <div className="col-md-4 blogs">

@@ -5,7 +5,7 @@ const AllFeatures = () => {
     return (
         <div className="bg-dark text-white">
         <div className="all-features-img  container pb-5">
-            <div className="row">
+            <div className="row g-4">
                 <div className="col-md-3">
                     <div className="part-1-img text-white">
                     </div>

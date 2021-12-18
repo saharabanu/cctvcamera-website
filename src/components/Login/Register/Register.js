@@ -25,59 +25,64 @@ const Register = () => {
         // console.log(data);
       };
     return (
-        <div>
-            <h2>Please Register</h2>
-            {!isLoading && <form onSubmit={handleSubmit(onSubmit)}>
-        <input
-          className="input-field mb-3"
-          name="namet"
-          placeholder="Your Name"
-          type="text"
-          
-          {...register("name", { required: true })}
-        />
-        <br />
-        <input
-          className="input-field mb-3"
-          name="email"
-          placeholder="Email"
-          type="email"
-          
-          {...register("email", { required: true })}
-        />
-        <br />
-        <input
-          className="input-field mb-3"
-          name="password"
-          type="password"
-          placeholder="Password"
-          
-          {...register("password", { required: true })}
-        />
-        <br />
-        <input
-          className="input-field mb-3"
-          name="password2"
-          type="password"
-          placeholder="Re-enter Password"
-          
-          {...register("password2", { required: true })}
-        />
-        <br />
+      <div>
+        <div className="col-md-10">
+        <div className="input-box text-center">
+      <h2>Please Register</h2>
+      {!isLoading && <form onSubmit={handleSubmit(onSubmit)}>
+  <input
+    className="input-field mb-3"
+    name="namet"
+    placeholder="Your Name"
+    type="text"
+    
+    {...register("name", { required: true })}
+  />
+  <br />
+  <input
+    className="input-field mb-3"
+    name="email"
+    placeholder="Email"
+    type="email"
+    
+    {...register("email", { required: true })}
+  />
+  <br />
+  <input
+    className="input-field mb-3"
+    name="password"
+    type="password"
+    placeholder="Password"
+    
+    {...register("password", { required: true })}
+  />
+  <br />
+  <input
+    className="input-field mb-3"
+    name="password2"
+    type="password"
+    placeholder="Re-enter Password"
+    
+    {...register("password2", { required: true })}
+  />
+  <br />
 
-        <input
-          className="submit-btn btn btn-danger mt-3"
-          type="submit"
-          value="Register"
-        />
-      </form>}
-      {isLoading && <Spinner animation="border" variant="danger" />}
-      {user?.email && <Alert variant="success">Create user successfully</Alert>}
-      {error && <Alert variant="danger">{error}</Alert>}
-      <p>Already Have an Account?<Link to='/login'>Please Login</Link></p>
+  <input
+    className="submit-btn btn btn-danger input-field"
+    type="submit"
+    value="Register"
+  />
+</form>}
+{isLoading && <Spinner animation="border" variant="danger" />}
+{user?.email && <Alert variant="success">Create user successfully</Alert>}
+{error && <Alert variant="danger">{error}</Alert>}
+<p>Already Have an Account?<Link to='/login'>Please Login</Link></p>
 
+  </div>
         </div>
-    );
+        <div className="col-md-2"></div>
+      </div>
+);
 };
 
 export default Register;

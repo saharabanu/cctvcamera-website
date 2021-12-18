@@ -3,6 +3,7 @@ import { Alert, Spinner } from 'react-bootstrap';
 import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
+import './Login.css';
 
 const Login = () => {
     const {user,loginUser,signinWithGoogle,isLoading,error} = useAuth();
@@ -20,12 +21,16 @@ const Login = () => {
       signinWithGoogle(location,navigate);
     }
     return (
-        <div>
-            <h2>Please Login</h2>
+        <div className='container login'>
+          <div className="row">
+            
+            <div className="col-md-6">
+            <div className="input-box">
+            <h2 className=''>Please Login</h2>
             { !isLoading && <form onSubmit={handleSubmit(onSubmit)}>
         
         <input
-          className="input-field mb-3"
+          className="input-field mb-3 "
           name="email"
           placeholder="Email"
           type="email"
@@ -33,7 +38,7 @@ const Login = () => {
         />
         <br />
         <input
-          className="input-field mb-3"
+          className="input-field mb-3 "
           name="password"
           type="password"
           placeholder="Password"
@@ -41,7 +46,7 @@ const Login = () => {
         />
         <br />
         <input
-          className="submit-btn btn btn-danger mt-3"
+          className="submit-btn btn btn-danger  input-field"
           type="submit"
           value="Login"
         />
@@ -53,9 +58,18 @@ const Login = () => {
       <p>Are You New User?<Link to='/register'>Please Register</Link></p>
 
 
-      <div>---------------------------------------</div>
-      <button onClick={handleGoogleSignIn} className="btn btn-warning">Google SignIn</button>
+      <div>-----------Social Media-----------------</div>
+      <button onClick={handleGoogleSignIn} className="btn btn-warning input-field">Google SignIn</button>
 
+        </div>
+            </div>
+            <div className="col-md-6">
+              <div className="login-img">
+              <img src="https://image.freepik.com/free-vector/mobile-login-concept-illustration_114360-83.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+         
         </div>
     );
 };

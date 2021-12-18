@@ -36,7 +36,7 @@ const AddProduct = () => {
                         <input placeholder="Size like large ,small" type="text" {...register("size", { required: true })} />
                         
 
-                        <Button type="submit" variant="dark">Add Product</Button>
+                        <Button  className="add-button"type="submit" variant="dark">Add Product</Button>
                     </form>
         </div>
     );

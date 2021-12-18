@@ -4,6 +4,7 @@ import {
   BrowserRouter, Route, Routes
 } from "react-router-dom";
 import './App.css';
+import AboutUs from './components/AboutUs/AboutUs';
 import AdminRoute from './components/AdminRoute/AdminRoute';
 import AllOrders from './components/Dashboard/AllOrders/AllOrders';
 import Dashboard from './components/Dashboard/Dashboard/Dashboard';
@@ -33,15 +34,17 @@ function App() {
        </Route>
       <Route path="/home" element={<Home/>}>
        </Route>
-      <Route path="/makeAdmin" element={<MakeAdmin/>}>
+      <Route path="/aboutUs" element={<AboutUs/>}>
+       </Route>
+      {/* <Route path="/makeAdmin" element={<MakeAdmin/>}>
        </Route>
       
       <Route path="/addProduct" element={<AddProduct/>}>
-       </Route>
+       </Route> */}
       <Route path="/details/:id" element={<PrivateRoute><Details/></PrivateRoute>}>
        </Route>
       <Route path="/dashboard" element={<PrivateRoute><Dashboard/></PrivateRoute>}>
-      <Route path="/dashboard" >
+                            <Route path="/dashboard" >
                             
                             </Route>
                             <Route path={`/dashboard/payment`} element={<Payment />}>

@@ -12,10 +12,7 @@ const Dashboard = () => {
     
     return (
         <div className="dashboard-bg">
-            {/* <Helmet>
-                <meta charSet="utf-8" />
-                <title>Dashboard</title>
-            </Helmet> */}
+            
 
             <Row className="g-0  ">
                 <Col md={2} className="custom-dashboard-link" >
@@ -46,13 +43,12 @@ const Dashboard = () => {
                     <Row className="g-0 dashboard-header ">
                         <Navbar bg="white" expand="md">
                             <Container>
-                                <h3 className="fw-light fs-2">Dashboard</h3>
+                                <h3 className="">Dashboard</h3>
                                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                                 <Navbar.Collapse id="basic-navbar-nav">
-                                    <Nav className="ms-auto pe-5">
-
-                                        <span className=" pt-2 fs-5 px-2 fw-lighter "> <Image className="user-picture" src={photoURL} roundedCircle /> {displayName}</span>
-                                        <Button variant="warning" onClick={logOut}  className="text-white">Log Out <i className="fas fa-sign-out-alt ps-2"></i></Button>
+                                    <Nav className="">
+                                        <span className="dasha"> <Image className="" src={photoURL} roundedCircle /> {displayName}</span>
+                                        <Button  variant="warning" onClick={logOut}  className="text-white dasha">Log Out </Button>
 
                                     </Nav>
                                 </Navbar.Collapse>
@@ -70,7 +66,11 @@ const Dashboard = () => {
         </div >
     );
 
-
+    // ms-auto pe-5
+    // pt-2 fs-5 px-2
+    // fw-light fs-2
+    // fw-lighter 
+    // <i className="fas fa-sign-out-alt ps-2"></i></i>
 
 
 

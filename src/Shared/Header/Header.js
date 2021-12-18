@@ -30,6 +30,15 @@ const Header = () => {
                                 >
                                 Home
                                 </NavLink>
+                                <NavLink className="header-items"
+                                to="/aboutUs"
+                                activeStyle={{
+                                    fontWeight: "bold",
+                                    color: "red"
+                                }}
+                                >
+                                About Us
+                                </NavLink>
                                 
                                 
                                 
@@ -56,12 +65,7 @@ const Header = () => {
                                 Login
                                 </NavLink>}
                                 <h4>{ user?.displayName}</h4>
-                               
-                                
-           
-            
-            
-                                   
+
                                 </div>
                                 
                             </div>
@@ -80,69 +84,7 @@ const Header = () => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // const {user,logOut} = useAuth()
     
-    // const activeStyle = {
-    //     fontWeight: "bold",
-    //     color: "#0DCAF0"
-    // }
-    // return (
-    //     <Navbar bg="dark" variant="dark" expand="md" sticky="top">
-    //         <Container>
-    //             <Navbar.Brand as={NavLink} to="/" className="fs-4">
-
-    //                 CCTV Camera
-    //             </Navbar.Brand>
-
-    //             <Navbar.Toggle aria-controls="basic-navbar-nav" />
-    //             <Navbar.Collapse id="basic-navbar-nav">
-    //                 <Nav className="ms-auto">
-    //                     <NavLink to="/home" className="fs-4 pt-1" activeStyle={activeStyle}>
-    //                         Home
-    //                     </NavLink>
-    //                     <NavLink to="/addProduct" className="fs-4 pt-1" activeStyle={activeStyle}>
-    //                         AddProduct
-    //                     </NavLink>
-    //                     {/* <NavLink to="/login" className="fs-4 pt-1" activeStyle={activeStyle}>
-    //                         Login
-    //                     </NavLink> */}
-    //                      {/* <NavLink to="/cycles" className="fs-4 pt-1" activeStyle={activeStyle}>
-    //                         Explore
-    //                     </NavLink> */}
-    //                     {user.email && <NavLink to="/dashboard" className="fs-4 pt-1" activeStyle={activeStyle}>
-    //                         Dashboard
-    //                     </NavLink>
-    //                     }
-
-
-    //                      {user?.email ?  <>
-    //                      <p className="text-white">Hi! {user?.displayName }</p>
-    //                         <Button variant="warning" onClick={logOut} className=" text-white">Log Out </Button></>
-    //                         :
-    //                         <NavLink to="/login" className="fs-4 pt-1" activeStyle={activeStyle}>
-    //                         Login
-    //                     </NavLink>
-    //                      }
-                       
-
-    //                 </Nav>
-    //             </Navbar.Collapse>
-    //         </Container>
-    //     </Navbar>
-    // );
 };
 
 

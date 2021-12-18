@@ -14,7 +14,7 @@ const Reviews = () => {
         <Container className="my-5">
             <Row>
                 <Col>
-                    <h4 className="fs-3 my-3">  <span className="text-warning">REVIEWS</span> FROM CLIENT</h4>
+                    <h4 className="fs-3 my-3">  <span className="text-warning">REVIEWS</span> <span style={{color:'#b22222'}} >FROM CLIENT</span> </h4>
 
 
                 </Col>
