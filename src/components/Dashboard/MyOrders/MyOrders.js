@@ -66,6 +66,11 @@ const MyOrders = () => {
                                                         <ListGroup.Item>Price: {order.price} Tk<br /> Status: {order.status}
                                                             <br />
                                                             Order Date : {order.orderData}
+                                                           {/* for pay */}
+                                                            
+                                                            {/* {order?.payment ? 'paid' : 
+                                                            <Link to={`/dashboard/payment/${order._id}`}><button>Pay</button></Link>
+                                                            } */}
                                                         </ListGroup.Item>
                                                         <ListGroup.Item><span className=""><Button variant="danger" className="my-1" onClick={() => handleOrderDeleteModelShow(order)}>Cancel It</Button></span>
                                                         </ListGroup.Item>
@@ -109,6 +114,7 @@ const MyOrders = () => {
                             <p className="mb-0">Total : $ {(total).toFixed(2)}</p>
                             <hr className="my-2" />
                             <div className="text-end">
+                                
                                 <Button variant="success" onClick={paymentPage}>Payment</Button>
                             </div>
                         </Col>

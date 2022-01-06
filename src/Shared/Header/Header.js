@@ -20,7 +20,7 @@ const Header = () => {
                     <div className="col-md-10">
                         <div className="menu-items">
                             <div className="d-flex justify-content-end align-items-end ">
-                                <div>
+                                <div className="nav-items">
                                 <NavLink className="header-items"
                                 to="/home"
                                 activeStyle={{

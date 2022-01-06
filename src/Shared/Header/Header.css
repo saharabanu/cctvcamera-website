@@ -8,9 +8,20 @@
     margin: 5px;
     font-size: 20px;
 }
+.nav-items{
+    position:sticky;
+    top:0;
+    overflow: hidden;
+}
 .menu-items a{
     text-decoration: none;
     color:white;
+    display: inline-block;
+   float: left;
+}
+.menu-items a:hover{
+    /* background-color: #ff9f1c; */
+    color:#0DCAF0;
 }
 
 

@@ -17,7 +17,7 @@ const Products = () => {
 <Container className="my-5">
             <Row>
                 <Col>
-                    <h4 className="fs-3 my-3">FEATURED  <span className="text-warning">PRODUCTS</span></h4>
+                    <h4 className="fs-3 my-3"><span className="text-warning">FEATURED PRODUCTS</span></h4>
 
                 </Col>
             </Row>

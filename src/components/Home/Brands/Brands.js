@@ -1,4 +1,5 @@
 import React from 'react';
+import './Brands.css';
 
 const Brands = () => {
 
@@ -21,62 +22,86 @@ const Brands = () => {
                 </div>
                 <div className="row g-4">
                     <div className="col-md-2">
-                        <div>
+                        <div className="brand-img" data-aos="flip-left"
+                            data-aos-easing="ease-out-cubic"
+                            data-aos-duration="1000">
                             <img src="https://n.foxdsgn.com/custo/wp-content/uploads/2020/02/IT-logo-1-copy-5-1.png" alt="" />
                         </div>
                     </div>
                     <div className="col-md-2">
-                        <div>
+                        <div className="brand-img" data-aos="flip-left"
+                            data-aos-easing="ease-out-cubic"
+                            data-aos-duration="1000">
                             <img src="https://n.foxdsgn.com/custo/wp-content/uploads/2020/02/IT-logo-6-copy-4.png" alt="" />
                         </div>
                     </div>
                     <div className="col-md-2">
-                        <div>
+                        <div className="brand-img" data-aos="flip-left"
+                            data-aos-easing="ease-out-cubic"
+                            data-aos-duration="1000">
                             <img src="https://n.foxdsgn.com/custo/wp-content/uploads/2020/02/IT-logo-3-copy-5.png" alt="" />
                         </div>
                     </div>
                     <div className="col-md-2">
-                        <div>
+                        <div className="brand-img" data-aos="flip-left"
+                            data-aos-easing="ease-out-cubic"
+                            data-aos-duration="1000">
                             <img src="https://n.foxdsgn.com/custo/wp-content/uploads/2020/02/IT-logo-4-copy-5.png" alt="" />
                         </div>
                     </div>
                     <div className="col-md-2">
-                        <div>
+                        <div className="brand-img" data-aos="flip-left"
+                            data-aos-easing="ease-out-cubic"
+                            data-aos-duration="1000">
                             <img src="https://n.foxdsgn.com/custo/wp-content/uploads/2020/02/IT-logo-2-copy-4.png" alt="" />
                         </div>
                     </div>
                     <div className="col-md-2">
-                        <div>
+                        <div className="brand-img" data-aos="flip-left"
+                            data-aos-easing="ease-out-cubic"
+                            data-aos-duration="1000">
                             <img src="https://n.foxdsgn.com/custo/wp-content/uploads/2020/02/IT-logo-7-copy-4.png" alt="" />
                         </div>
                     </div>
                     <div className="col-md-2">
-                        <div>
+                        <div className="brand-img" data-aos="flip-left"
+                            data-aos-easing="ease-out-cubic"
+                            data-aos-duration="1000">
                             <img src="https://n.foxdsgn.com/custo/wp-content/uploads/2020/02/Vector-Smart-Object15.png" alt="" />
                         </div>
                     </div>
                     <div className="col-md-2">
-                        <div>
+                        <div className="brand-img" data-aos="flip-left"
+                            data-aos-easing="ease-out-cubic"
+                            data-aos-duration="1000">
                             <img src="https://n.foxdsgn.com/custo/wp-content/uploads/2020/02/Vector-Smart-Object12.png" alt="" />
                         </div>
                     </div>
                     <div className="col-md-2">
-                        <div>
+                        <div className="brand-img" data-aos="flip-left"
+                            data-aos-easing="ease-out-cubic"
+                            data-aos-duration="1000">
                             <img src="https://n.foxdsgn.com/custo/wp-content/uploads/2020/02/Vector-Smart-Object11.png" alt="" />
                         </div>
                     </div>
                     <div className="col-md-2">
-                        <div>
+                        <div className="brand-img" data-aos="flip-left"
+                            data-aos-easing="ease-out-cubic"
+                            data-aos-duration="1000">
                             <img src="https://n.foxdsgn.com/custo/wp-content/uploads/2020/02/Vector-Smart-Object13.png" alt="" />
                         </div>
                     </div>
                     <div className="col-md-2">
-                        <div>
+                        <div className="brand-img" data-aos="flip-left"
+                            data-aos-easing="ease-out-cubic"
+                            data-aos-duration="1000"> 
                             <img src="https://n.foxdsgn.com/custo/wp-content/uploads/2020/02/Vector-Smart-Object14.png" alt="" />
                         </div>
                     </div>
                     <div className="col-md-2">
-                        <div>
+                        <div className="brand-img" data-aos="flip-left"
+                            data-aos-easing="ease-out-cubic"
+                            data-aos-duration="1000">
                             <img src="https://n.foxdsgn.com/custo/wp-content/uploads/2020/02/Vector-Smart-Object16.png" alt="" />
                         </div>
                     </div>
