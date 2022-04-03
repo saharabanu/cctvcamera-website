@@ -25,8 +25,9 @@ const Register = () => {
         // console.log(data);
       };
     return (
-      <div>
-        <div className="col-md-10">
+      <div className='login'>
+        <div className=" container">
+          <div className="d-flex justify-content-center align-items-center rounded">
         <div className="input-box text-center">
       <h2>Please Register</h2>
       {!isLoading && <form onSubmit={handleSubmit(onSubmit)}>
@@ -76,11 +77,13 @@ const Register = () => {
 {isLoading && <Spinner animation="border" variant="danger" />}
 {user?.email && <Alert variant="success">Create user successfully</Alert>}
 {error && <Alert variant="danger">{error}</Alert>}
-<p>Already Have an Account?<Link to='/login'>Please Login</Link></p>
+<p className="fw-bold">Already Have an Account?<Link to='/login'>Please Login</Link></p>
 
   </div>
+  </div>
         </div>
-        <div className="col-md-2"></div>
+       
+        
       </div>
 );
 };

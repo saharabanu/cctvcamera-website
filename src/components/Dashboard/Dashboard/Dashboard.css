@@ -4,6 +4,11 @@
     }
     .dashboard-contain-bg{
     background-color: #F8F9FA;
+    /* background-image: url('https://5.imimg.com/data5/QQ/BI/LA/SELLER-13603641/cctv-hd-camera-500x500.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+    /* opacity: 11111; */
     height: 100vh;
     }
     .custom-dashboard-link a{
