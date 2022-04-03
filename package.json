@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emailjs/browser": "^3.5.0",
     "@reduxjs/toolkit": "^1.7.0",
     "@stripe/react-stripe-js": "^1.7.0",
     "@stripe/stripe-js": "^1.22.0",
@@ -21,7 +22,8 @@
     "react-rating": "^2.0.5",
     "react-redux": "^7.2.6",
     "react-router-dom": "^6.1.1",
-    "react-scripts": "4.0.3"
+    "react-scripts": "4.0.3",
+    "react-scroll-to-top": "^1.0.8"
   },
   "scripts": {
     "start": "react-scripts start",

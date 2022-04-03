@@ -17,3 +17,11 @@
     transform: scale(1.02);
    
 }
+.quick-link{
+    text-decoration: none;
+    color:white;
+}
+.quick-link:hover{
+    transform: scale(1.02);
+   
+}

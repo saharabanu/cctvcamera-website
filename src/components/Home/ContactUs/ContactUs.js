@@ -1,7 +1,25 @@
-import React from 'react';
+import emailjs from '@emailjs/browser';
+import React, { useRef } from 'react';
 import './ContactUs.css';
 
 const ContactUs = () => {
+
+    const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('myproject_01', 'template_4bq1gkp', form.current, 'yYcbHAr7q3sv-yk9O')
+      .then((result) => {
+          alert('Message sent successfully')
+          console.log(result.text);
+
+      }, (error) => {
+          alert(error.message)
+          console.log(error.text);
+      });
+      e.target.reset();
+  };
     return (
         <div className='w-100 h-100' style={{backgroundColor:'#fafad2'}}>
         <div className="container mb-5">
@@ -17,11 +35,14 @@ const ContactUs = () => {
                     <div className='input-box mb-5'>
                         <h4 style={{color:'#b22222'}}>Need to Make an Equiry?</h4>
                         <div>
-                            <input className='input-field mb-3' type="text" placeholder='Your Name' />
-                            <input className='input-field mb-3' type="email" placeholder='Your Email'/>
-                            <input className='input-field mb-3' type="number" placeholder='Your Phone Number'/>
-                            <input className='input-field mb-3' type="text" placeholder='Your Comment'/>
-                            <input className='input-field mb-3' type="submit" value="submit" />
+                            <form ref={form} onSubmit={sendEmail}>
+                            <input className='input-field mb-3' type="text" placeholder='Your Name' name="client_name" required />
+                            <input className='input-field mb-3' type="email" placeholder='Your Email' name="email" required/>
+
+                            <input className='input-field mb-3' type="number" placeholder='Your Phone Number' name="client_phone"/>
+                            <textarea className='input-field mb-3' type="text" placeholder='Your Comment' name="message" required/>
+                            <input className='input-field mb-3 submit-btn' type="submit" value="Submit" />
+                            </form>
                         </div>
                     </div>
                 </div>
