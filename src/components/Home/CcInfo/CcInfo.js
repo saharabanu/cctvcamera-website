@@ -3,8 +3,9 @@ import './CcInfo.css';
 
 const CcInfo = () => {
     return (
-        <div className='bg-white w-100 h-100 p-5'>
+        <div className='text-white w-100 h-100 p-5'>
             <div className="container">
+                <h4 className='pb-4 text-danger'>CCTV Information</h4>
                 <div className="row">
                     <div className="col-md-4">
                         <div className='d-flex justify-content-center align-items-center'>

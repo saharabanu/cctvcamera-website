@@ -101,3 +101,6 @@ const Footer = () => {
 };
 
 export default Footer;
+
+// https://themeforest.net/search/cctv%20camera
+// https://marley-theme.myshopify.com/

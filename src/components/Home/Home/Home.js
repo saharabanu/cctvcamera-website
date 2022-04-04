@@ -8,8 +8,11 @@ import Brands from '../Brands/Brands';
 import CameraBanner from '../CameraBanner/CameraBanner';
 import CcInfo from '../CcInfo/CcInfo';
 import ContactUs from '../ContactUs/ContactUs';
+import CounterUp from '../CounterUp/CounterUp';
+import Offer from '../Offer/Offer';
 import Products from '../Products/Products';
 import Reviews from '../Reviews/Reviews';
+import Servicing from '../Servicing/Servicing';
 
 // #FFEBCD
 const Home = () => {
@@ -20,10 +23,13 @@ const Home = () => {
            <AllFeatures></AllFeatures>
            <CameraBanner></CameraBanner>
             <Products/>
-            <Reviews></Reviews>
+            <Offer/>
+            <CounterUp/>
+           <Servicing/>
             <CcInfo></CcInfo>
             <Brands></Brands>
             <Blogs/>
+            <Reviews></Reviews>
             <ContactUs></ContactUs>
 
            <Footer></Footer>
