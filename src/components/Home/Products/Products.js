@@ -14,7 +14,7 @@ const Products = () => {
     return (
 
 
-<Container className="my-5">
+<Container id="products" className="my-5">
             <Row>
                 <Col>
                     <h4 className="fs-3 my-3"><span className="text-warning">FEATURED PRODUCTS</span></h4>

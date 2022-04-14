@@ -16,6 +16,7 @@ import Review from './components/Dashboard/Review/Review';
 import AddProduct from './components/Home/AddProduct/AddProduct';
 import Details from './components/Home/Details/Details';
 import Home from './components/Home/Home/Home';
+import Reviews from './components/Home/Reviews/Reviews';
 import Login from './components/Login/Login/Login';
 import Register from './components/Login/Register/Register';
 import NotFound from './components/NotFound/NotFound';
@@ -35,6 +36,8 @@ function App() {
       <Route path="/home" element={<Home/>}>
        </Route>
       <Route path="/aboutUs" element={<AboutUs/>}>
+       </Route>
+      <Route path="/reviews" element={<Reviews/>}>
        </Route>
       {/* <Route path="/makeAdmin" element={<MakeAdmin/>}>
        </Route>

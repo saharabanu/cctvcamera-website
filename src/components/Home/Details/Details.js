@@ -2,17 +2,17 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Button, Col, Container, Image, Modal, Row } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
 import Footer from '../../../Shared/Footer/Footer';
 import Header from '../../../Shared/Header/Header';
 import './Details.css';
 
 const Details = () => {
-    const { user } = useAuth();
+    const { user,admin } = useAuth();
+    const navigate= useNavigate();
     const { id } = useParams();
     const [selectedProduct, setSelectedProduct] = useState([]);
-    // const navigate = useNavigate();
     const { register, handleSubmit, reset } = useForm();
     const [showProductBuyModal, setShowProductBuyModal] = useState(false);
     const [BuyingProduct, setBuyingProduct] = useState([]);
@@ -38,11 +38,11 @@ const Details = () => {
             .then(res => {
                 if (res.data.insertedId) {
                     alert("Congrats Your order has been added successfully.")
-                    // if (!admin) {
-                    //     navigate('/dashboard')
-                    // } else (
-                    //     navigate('/home')
-                    // )
+                    if (!admin) {
+                        navigate('/dashboard')
+                    } else (
+                        navigate('/home')
+                    )
 
                 }
             })
@@ -76,7 +76,7 @@ const Details = () => {
                             <form onSubmit={handleSubmit(onSubmit)}>
                                 <input type="text" defaultValue={user?.displayName} {...register("name")} />
                                 <input type="email"  defaultValue={user?.email} readOnly {...register("email")} />
-                                <input type="number" placeholder="Mobile number" {...register("mobile", { required: true})} />
+                                <input type="number" placeholder="Mobile number at least 11 digit " {...register("mobile", { required: true})} />
                                 <textarea placeholder="Address" type="text" {...register("address", { required: true })} />
                                 <input type="text" defaultValue={selectedProduct.name} readOnly {...register("productName")} />
                                 <input type="number" defaultValue={selectedProduct.price} readOnly {...register("price")} />

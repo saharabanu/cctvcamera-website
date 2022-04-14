@@ -18,7 +18,7 @@ const Footer = () => {
   
       emailjs.sendForm('myproject_01', 'template_4bq1gkp', form.current, 'yYcbHAr7q3sv-yk9O')
         .then((result) => {
-            alert('Message sent successfully')
+            alert('Your Email  sent successfully for getting Newsletter for us')
             console.log(result.text);
   
         }, (error) => {
@@ -38,7 +38,7 @@ const Footer = () => {
                         <h3>CCTV Camera Mart</h3>
                         <p >208 West 22th Street  <br /> Uttara, Dhaka</p>
                         <p className=" custom-footer-link">Email : saharabanungn@gmail.com</p>
-                        <p className="custom-footer-link">Phone : 01950458000</p>
+                        <p className="custom-footer-link">Phone : +8801752810246</p>
                         <p className=" custom-footer-link">Fax : 01950458000</p>
                         <div>
                             <a href="https://www.facebook.com/sahara.banu.796/" target="_blank" rel="noopener noreferrer" title="facebook"><span><Image src={fb} rounded className="social-media-customize" /></span></a>
@@ -54,9 +54,9 @@ const Footer = () => {
                     <Col md={3}>
                         <h3>LATEST FROM OUR BLOG</h3>
 
-                        <p className=" custom-footer-link">Lorem ipsum dolor sit amet  <br /> October 12, 2020</p>
-                        <p className=" custom-footer-link">Lorem ipsum dolor sit amet  <br /> October 12, 2020</p>
-                        <p className=" custom-footer-link">Lorem ipsum dolor sit amet<br /> October 12, 2020</p>
+                        <p className=" custom-footer-link">Our first blog  <br /> October 12, 2020</p>
+                        <p className=" custom-footer-link">Our 2nd blog  <br /> december, 2021</p>
+                        <p className=" custom-footer-link">Our 3rd blog <br /> March 12, 2022</p>
 
 
                     </Col>
@@ -76,11 +76,11 @@ const Footer = () => {
                         <p >Leave us your email address and we contact you back
                         </p>
                         <div>
-                        <form ref={form} onSubmit={sendEmail}>
+                        <form ref={form} onSubmit={sendEmail} className="">
                             
-                            <input className="mb-3 " placeholder="Enter you email Address" name="email" required/>
+                            <input className="mb-3 px-4 py-2" placeholder="Enter you email Address" name="email" required/>
                     
-                        <input className='bg-warning' type="submit" value="Subscribe" />
+                        <input className='bg-warning px-4 py-2' type="submit" value="Subscribe" />
                        
                         </form>
                         </div>

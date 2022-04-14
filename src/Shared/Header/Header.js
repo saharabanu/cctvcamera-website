@@ -1,5 +1,7 @@
 import React from 'react';
+import { Nav } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import useAuth from '../../Hooks/useAuth';
 import './Header.css';
 
@@ -31,6 +33,15 @@ const Header = () => {
                                 Home
                                 </NavLink>
                                 <NavLink className="header-items"
+                                to="/dashboard/review"
+                                activeStyle={{
+                                    fontWeight: "bold",
+                                    color: "red"
+                                }}
+                                >
+                                Review
+                                </NavLink>
+                                <NavLink className="header-items"
                                 to="/aboutUs"
                                 activeStyle={{
                                     fontWeight: "bold",
@@ -39,6 +50,35 @@ const Header = () => {
                                 >
                                 About Us
                                 </NavLink>
+                                <Nav.Link className="header-items-hash" as={HashLink}
+                                to="/home#contactUs" 
+                                activeStyle={{
+                                    fontWeight: "bold",
+                                    color: "red"
+                                }}
+                                >
+                                ContactUs
+                                </Nav.Link>
+                                <Nav.Link className="header-items-hash" as={HashLink}
+                                to="/home#products" 
+                                activeStyle={{
+                                    fontWeight: "bold",
+                                    color: "red"
+                                }}
+                                >
+                                Products
+                                </Nav.Link>
+                                <Nav.Link className="header-items-hash" as={HashLink}
+                                to="/home#blogs" 
+                                activeStyle={{
+                                    fontWeight: "bold",
+                                    color: "red"
+                                }}
+                                >
+                                Blogs
+                                </Nav.Link>
+
+                                
                                 
                                 
                                 

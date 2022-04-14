@@ -38,7 +38,7 @@ const useFirebase =()=>{
     navigate('/');
   })
   .catch((error) => {
-    setError(error.message);
+    setError(error.code);
     
   }) 
   .finally(()=>setIsLoading(false));
@@ -54,7 +54,7 @@ const useFirebase =()=>{
     setError('');
   })
   .catch((error) => {
-    setError(error.message);
+    setError(error.code);
   })
   .finally(()=>setIsLoading(false));
     }
@@ -74,7 +74,7 @@ const useFirebase =()=>{
 
     
   }).catch((error) => {
-    setError(error.message)
+    setError(error.code)
   })
   .finally(()=>setIsLoading(false));
     }

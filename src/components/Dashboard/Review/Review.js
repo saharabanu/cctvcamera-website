@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Button, Col, Container, Modal, Row } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import useAuth from '../../../Hooks/useAuth';
+import './Review.css';
 
 
 const Review = () => {
@@ -29,19 +30,23 @@ const Review = () => {
             })
     }
     return (
-        <Container className="py-5">
-            <h4 className="fs-3 fw-light">Add a Review </h4>
+        <Container className="py-5 review-part ">
+           
             <Row className="g-0 d-flex justify-content-center">
                 <Col md={4}>
-                    <form onSubmit={handleSubmit(handelAddReview)} className="dashboard-from ms-3">
+                <h4 className="fs-3 fw-light user-review">Add a Review </h4>
+                    <form onSubmit={handleSubmit(handelAddReview)} className="review-form dashboard-from ms-3">
+                    {/* dashboard-from ms-3 */}
 
-                        <input defaultValue={user.displayName} type="text" {...register("name")} />
-                        <input defaultValue={user.email} type="text" {...register("email")} />
-                        <input placeholder="Photo" type="text"{...register("img", { required: true })} />
+                        <input defaultValue={user.displayName} type="text" {...register("name")} /> 
+                        <input defaultValue={user.email} type="text" {...register("email")} /> 
+                        <input placeholder="Photo" type="text"{...register("img", { required: true })} /> 
                         <input placeholder="Rating" type="number"{...register("rating", { required: true, min: "0", max: "5" })} />
+                        
 
                         <textarea placeholder=" Write Comment" type="text" {...register("description", { required: true })} />
-                        <Button type="submit" variant="dark">Add Review</Button>
+                        
+                        <Button type="submit" variant="dark" className='review-btn'>Add Review</Button>
                     </form>
                 </Col>
             </Row>

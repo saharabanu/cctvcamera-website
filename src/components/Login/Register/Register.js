@@ -76,7 +76,7 @@ const Register = () => {
 </form>}
 {isLoading && <Spinner animation="border" variant="danger" />}
 {user?.email && <Alert variant="success">Create user successfully</Alert>}
-{error && <Alert variant="danger">{error}</Alert>}
+{error && <Alert variant="danger">User id does not match</Alert>}
 <p className="fw-bold">Already Have an Account?<Link to='/login'>Please Login</Link></p>
 
   </div>

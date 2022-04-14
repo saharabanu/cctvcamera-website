@@ -54,7 +54,7 @@ const Login = () => {
       {isLoading && <Spinner animation="border" variant="danger" />}
       {user?.email && <Alert
       variant="success">Create user successfully</Alert>}
-      {error && <Alert variant="danger">{error}</Alert>}
+      {error && <Alert variant="danger">User email or password does not match</Alert>}
       <p className="fw-bold">Are You New User?<Link to='/register'>Please Register</Link></p>
 
 

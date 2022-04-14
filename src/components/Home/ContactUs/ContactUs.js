@@ -21,7 +21,7 @@ const ContactUs = () => {
       e.target.reset();
   };
     return (
-        <div className='w-100 h-100' style={{backgroundColor:'#fafad2'}}>
+        <div id="contactUs" className='w-100 h-100' style={{backgroundColor:'#fafad2'}}>
         <div className="container mb-5">
             <div className="row g-4">
                 <div className="col-md-6">
