@@ -6,7 +6,7 @@
 .header-items{
     list-style: none;
     margin: 5px;
-    padding:0 7px;
+    padding:0 3px;
     font-size: 20px;
 }
 .nav-items{
@@ -36,17 +36,3 @@
 
 
 
-/* 
-nav a{
-    text-decoration: none;
-    margin: 0 5px;
-color: white;
-    font-size: 14px;
-}
-nav a:hover{
- border-bottom: 1px solid #0DCAF0;
- color: #0DCAF0;
-}
-.user-picture{
-    height: 30px;
-} */
