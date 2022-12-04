@@ -1,0 +1,1 @@
+export const url = 'https://cctv-camera-api.onrender.com/'

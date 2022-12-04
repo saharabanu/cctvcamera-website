@@ -7,7 +7,7 @@ const AddProduct = () => {
     const { register, handleSubmit,reset } = useForm();
 
     const onSubmit = data =>{
-        fetch('https://lit-badlands-25658.herokuapp.com/products',{
+        fetch('https://cctv-camera-api.onrender.com/products',{
             method:"POST",
             headers:{
                 'content-type': 'application/json'

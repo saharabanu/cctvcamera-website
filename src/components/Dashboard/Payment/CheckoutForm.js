@@ -6,9 +6,9 @@ const CheckoutForm = () => {
     const stripe = useStripe();
     const elements = useElements();
     const [error, setError] = useState('');
-    const [clientSecret, setClientSecret] = useState('')
+    // const [clientSecret, setClientSecret] = useState('')
     // useEffect(()=>{
-    //     fetch('https://lit-badlands-25658.herokuapp.com/create-payment-intent', {
+    //     fetch('https://cctv-camera-api.onrender.com/create-payment-intent', {
     //         method :'POST',
     //         headers: {
     //             'content-type': 'application/json'

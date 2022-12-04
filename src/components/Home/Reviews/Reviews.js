@@ -6,7 +6,7 @@ import Rating from 'react-rating';
 const Reviews = () => {
     const [allReviews, setAllReviews] = useState({});
     useEffect(() => {
-        axios.get('https://lit-badlands-25658.herokuapp.com/reviews')
+        axios.get('https://cctv-camera-api.onrender.com/reviews')
             .then(res => setAllReviews(res.data))
     }, [])
 

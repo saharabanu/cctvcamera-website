@@ -7,7 +7,7 @@ import './Products.css';
 const Products = () => {
     const [products,setProducts] = useState([]);
     useEffect(()=>{
-        axios.get('https://lit-badlands-25658.herokuapp.com/products')
+        axios.get('https://cctv-camera-api.onrender.com/products')
             .then(res => setProducts(res.data))
        
     },[])

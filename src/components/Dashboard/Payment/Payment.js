@@ -9,7 +9,7 @@ const Payment = () => {
     // const {id} = useParams();
     // const [productOne, setProductOne] =useState({})
     // useEffect(()=>{
-    //     fetch(`https://lit-badlands-25658.herokuapp.com/products/${id}`)
+    //     fetch(`https://cctv-camera-api.onrender.com/products/${id}`)
     //     .then(res=>res.json())
     //     .then(data=>setProductOne(data))
     // },[id])

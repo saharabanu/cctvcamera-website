@@ -28,13 +28,13 @@ const Details = () => {
         handleProductBuyModalShow();
     };
     useEffect(() => {
-        axios.get(`https://lit-badlands-25658.herokuapp.com/products/${id}`)
+        axios.get(`https://cctv-camera-api.onrender.com/products/${id}`)
             .then(res => setSelectedProduct(res.data))
     }, [id])
     const handleReviewsToServer = () => {
         handleProductBuyModalClose()
 
-        axios.post('https://lit-badlands-25658.herokuapp.com/orders', BuyingProduct)
+        axios.post('https://cctv-camera-api.onrender.com/orders', BuyingProduct)
             .then(res => {
                 if (res.data.insertedId) {
                     alert("Congrats Your order has been added successfully.")

@@ -11,7 +11,7 @@ const MakeAdmin = () => {
 
 
     const onSubmit = (data) => {
-        fetch("https://lit-badlands-25658.herokuapp.com/users/admin", {
+        fetch("https://cctv-camera-api.onrender.com/users/admin", {
           method: "PUT",
           headers: { 
             'authorization':`Bearer ${token}`,
