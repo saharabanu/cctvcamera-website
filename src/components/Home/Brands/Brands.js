@@ -1,5 +1,53 @@
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+import Slider from "react-slick";
+
 import React from 'react';
 import './Brands.css';
+
+const data = [
+    {
+        id: 1,
+        img:"https://n.foxdsgn.com/custo/wp-content/uploads/2020/02/IT-logo-1-copy-5-1.png"
+    },
+    {
+        id: 2,
+        img:"https://n.foxdsgn.com/custo/wp-content/uploads/2020/02/IT-logo-1-copy-5-1.png"
+    },
+    {
+        id: 3,
+        img:"https://n.foxdsgn.com/custo/wp-content/uploads/2020/02/IT-logo-1-copy-5-1.png"
+    },
+    {
+        id: 4,
+        img:"https://n.foxdsgn.com/custo/wp-content/uploads/2020/02/IT-logo-1-copy-5-1.png"
+    },
+    {
+        id: 5,
+        img:"https://n.foxdsgn.com/custo/wp-content/uploads/2020/02/IT-logo-1-copy-5-1.png"
+    },
+    {
+        id: 1,
+        img:"https://n.foxdsgn.com/custo/wp-content/uploads/2020/02/IT-logo-1-copy-5-1.png"
+    },
+    {
+        id: 6,
+        img:"https://n.foxdsgn.com/custo/wp-content/uploads/2020/02/IT-logo-1-copy-5-1.png"
+    },
+    {
+        id: 7,
+        img:"https://n.foxdsgn.com/custo/wp-content/uploads/2020/02/IT-logo-1-copy-5-1.png"
+    },
+    {
+        id: 8,
+        img:"https://n.foxdsgn.com/custo/wp-content/uploads/2020/02/IT-logo-1-copy-5-1.png"
+    },
+    {
+        id: 9,
+        img:"https://n.foxdsgn.com/custo/wp-content/uploads/2020/02/IT-logo-1-copy-5-1.png"
+    }
+]
 
 
 
@@ -7,25 +55,15 @@ import './Brands.css';
 
 const Brands = () => {
 
-    const breakpoints = {
+    let settings = {
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 7,
+        slidesToScroll: 1
+      };
+
     
-        480: {
-            slidesPerView: 3,
-           spaceBetween: 3,
-          },
-        576: {
-            slidesPerView: 3,
-           spaceBetween: 3,
-          },
-          786: {
-         slidesPerView: 5,
-            spaceBetween: 3,
-         },
-          1024: {
-          slidesPerView: 6,
-            spaceBetween: 3,
-           },
-         }
 
     
     
@@ -45,7 +83,16 @@ const Brands = () => {
                         <p className='text-white p-5'>Our Security is a leading security systems company based in New York City. We specialize in planning and design, installation, repair and maintenance of full range security systems for business & commercial properties, residential buildings and industrial facilities throughout all five boroughs.</p>
                     </div>
                 </div> */}
-                <div className="row g-4 mt-4">
+                
+                <Slider {...settings}>
+                {
+                    data?.map((item)=><div className="brand-img mt-5" >
+                            <img src={item.img} alt="" />
+                        </div>
+                    )
+                }
+                </Slider>
+                {/* <div className="row g-4 mt-4">
 
                 
                     <div className="col-md-2">
@@ -132,7 +179,7 @@ const Brands = () => {
                             <img src="https://n.foxdsgn.com/custo/wp-content/uploads/2020/02/Vector-Smart-Object16.png" alt="" />
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
     );

@@ -58,8 +58,8 @@ const Login = () => {
       <p className="">Are You New User?<Link to='/register'>Please Register</Link> or <Link to="/">Back Home</Link></p>
 
 
-      <div>-----------Social Media-----------------</div>
-      <button onClick={handleGoogleSignIn} className="btn btn-secondary input-field fw-bold mt-2"> Google SignIn</button>
+      {/* <div>-----------Social Media-----------------</div>
+      <button onClick={handleGoogleSignIn} className="btn btn-secondary input-field fw-bold mt-2"> Google SignIn</button> */}
 
         </div>
             </div>

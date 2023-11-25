@@ -4,6 +4,8 @@ import { Button, Col, Container, Modal, Row } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import useAuth from '../../../Hooks/useAuth';
 import './Review.css';
+import { useNavigate } from 'react-router-dom';
+
 
 
 const Review = () => {
@@ -13,6 +15,7 @@ const Review = () => {
     const [newReview, setNewReview] = useState({})
     const handleReviewModelClose = () => setReviewModal(false);
     const handleReviewModelShow = () => setReviewModal(true);
+    const navigate= useNavigate()
     const handelAddReview = data => {
 
         reset();
@@ -26,6 +29,7 @@ const Review = () => {
             .then(res => {
                 if (res.data.insertedId) {
                     alert("Congrats Your review has been added successfully.")
+                    navigate("/")
                 }
             })
     }
@@ -34,19 +38,20 @@ const Review = () => {
            
             <Row className="g-0 d-flex justify-content-center">
                 <Col md={4}>
-                <h4 className="fs-3 fw-light user-review">Add a Review </h4>
-                    <form onSubmit={handleSubmit(handelAddReview)} className="review-form dashboard-from ms-3">
+                <h4 className=" text-primary  user-review">Add a Review </h4>
+                    <form onSubmit={handleSubmit(handelAddReview)} className="review-form  ms-3">
                     {/* dashboard-from ms-3 */}
 
-                        <input defaultValue={user.displayName} type="text" {...register("name")} /> 
-                        <input defaultValue={user.email} type="text" {...register("email")} /> 
-                        <input placeholder="Photo" type="text"{...register("img", { required: true })} /> 
-                        <input placeholder="Rating" type="number"{...register("rating", { required: true, min: "0", max: "5" })} />
+                        <input defaultValue={user.displayName} type="text" {...register("name")}  className='input-field mb-3'/> 
+                      
+                        <input defaultValue={user.email} type="text" {...register("email")} className='input-field mb-3'/> 
+                        <input placeholder="Photo (optional) img link" type="text"{...register("img", {  })} className='input-field mb-3'/> 
+                        <input placeholder="Rating" type="number"{...register("rating", { required: true, min: "0", max: "5" })} className='input-field mb-3'/>
                         
 
-                        <textarea placeholder=" Write Comment" type="text" {...register("description", { required: true })} />
+                        <textarea placeholder=" Write Comment" type="text" {...register("description", { required: true })} className='input-field mb-3'/>
                         
-                        <Button type="submit" variant="dark" className='review-btn'>Add Review</Button>
+                        <Button type="submit"  className='review-btn'>Add Review</Button>
                     </form>
                 </Col>
             </Row>

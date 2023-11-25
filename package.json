@@ -26,7 +26,9 @@
     "react-router-hash-link": "^2.4.3",
     "react-scripts": "4.0.3",
     "react-scroll-to-top": "^1.0.8",
-    "swiper": "^10.3.1"
+    "react-slick": "^0.29.0",
+    "slick-carousel": "^1.8.1",
+    "swiper": "^11.0.5"
   },
   "scripts": {
     "start": "react-scripts start",

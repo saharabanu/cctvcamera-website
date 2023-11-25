@@ -93,3 +93,6 @@
 .blog-head{
     margin-bottom: 50px;
 }
+.slick-slide > div{
+    margin : 0 10px
+}

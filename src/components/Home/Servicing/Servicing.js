@@ -3,7 +3,9 @@ import { Card, Col, Container, Row } from 'react-bootstrap';
 
 const Servicing = () => {
     return (
-        <div className='bg-white pb-3'>
+        <div className='bg-white pb-3 ' data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="1000">
         <Container className="my-5">
             <Row>
                 <Col>

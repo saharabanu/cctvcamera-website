@@ -3,7 +3,9 @@ import './CameraBanner.css';
 
 const CameraBanner = () => {
     return (
-        <div className='banner2'>
+        <div className='banner2'data-aos="fade-right"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="1000">
             <div className='container'>
                 <div className="row">
                     <div className="col-md-6">

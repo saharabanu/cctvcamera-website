@@ -30,14 +30,16 @@ const Home = () => {
            <CameraBanner></CameraBanner>
             <Products/>
             <Offer/>
+            <Reviews></Reviews>
             <CounterUp/>
            <Servicing/>
+           <Blogs/>
             <CcInfo></CcInfo>
-            <Brands></Brands>
-            <Blogs/>
-            <Reviews></Reviews>
+            
+           
+           
             <ContactUs></ContactUs>
-
+            <Brands></Brands>
            <Footer></Footer>
         </div>
     );

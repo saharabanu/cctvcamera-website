@@ -21,6 +21,7 @@ import NotFound from "./components/NotFound/NotFound";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import AuthProvider from "./contexts/AuthProvider";
 
+
 function App() {
   return (
     <div className="App">
