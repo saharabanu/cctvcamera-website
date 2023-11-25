@@ -1,124 +1,61 @@
 import React from "react";
-import { Nav } from "react-bootstrap";
-import { NavLink } from "react-router-dom";
+import { Container, Nav, Navbar } from "react-bootstrap";
+import logo from "../../img/logo1.png";
+
 import { HashLink } from "react-router-hash-link";
 import useAuth from "../../Hooks/useAuth";
 import "./Header.css";
 
+
 const Header = () => {
   const { user, logOut } = useAuth();
   return (
-    <div className="header-container bg-dark ">
-      <div className="header container">
-        <div className="row">
-          <div className="col-md-3 pt-3">
-            <div>
-              <h3>CCTV Camera</h3>
-            </div>
-          </div>
-          <div className="col-md-9 pt-3">
-            <div className="menu-items">
-              <div className="d-flex justify-content-end align-items-end ">
-                <div className="nav-items">
-                  <NavLink
-                    className="header-items"
-                    to="/home"
-                    activeStyle={{
-                      fontWeight: "bold",
-                      color: "red",
-                    }}
-                  >
-                    Home
-                  </NavLink>
-                  <NavLink
-                    className="header-items"
-                    to="/dashboard/review"
-                    activeStyle={{
-                      fontWeight: "bold",
-                      color: "red",
-                    }}
-                  >
-                    Review
-                  </NavLink>
-                  <NavLink
-                    className="header-items"
-                    to="/aboutUs"
-                    activeStyle={{
-                      fontWeight: "bold",
-                      color: "red",
-                    }}
-                  >
-                    About Us
-                  </NavLink>
-                  <Nav.Link
-                    className="header-items-hash"
-                    as={HashLink}
-                    to="/home#contactUs"
-                    activeStyle={{
-                      fontWeight: "bold",
-                      color: "red",
-                    }}
-                  >
-                    ContactUs
-                  </Nav.Link>
-                  <Nav.Link
-                    className="header-items-hash"
-                    as={HashLink}
-                    to="/home#products"
-                    activeStyle={{
-                      fontWeight: "bold",
-                      color: "red",
-                    }}
-                  >
-                    Products
-                  </Nav.Link>
-                  <Nav.Link
-                    className="header-items-hash"
-                    as={HashLink}
-                    to="/home#blogs"
-                    activeStyle={{
-                      fontWeight: "bold",
-                      color: "red",
-                    }}
-                  >
-                    Blogs
-                  </Nav.Link>
+    <Navbar className="header-nav bg-white" sticky="top" collapseOnSelect expand="lg">
+    <Container>
+      <Navbar.Brand href="#home" className="header-name">
+        <img className="" src={logo} alt="" />
+      </Navbar.Brand>
+      <Navbar.Toggle />
+      <Navbar.Collapse className="justify-content-end header">
+        <Nav.Link className="" as={HashLink} to="/home">
+          Home
+        </Nav.Link>
 
-                  {user?.email ? (
-                    <>
-                      <NavLink
-                        className="header-items"
-                        to="/dashboard"
-                        activeStyle={{
-                          fontWeight: "bold",
-                          color: "red",
-                        }}
-                      >
-                        Dashboard
-                      </NavLink>
+        <Nav.Link className="" as={HashLink} to="/dashboard/review">
+          Review
+        </Nav.Link>
 
-                      <button onClick={logOut}>Logout</button>
-                    </>
-                  ) : (
-                    <NavLink
-                      className="header-items"
-                      to="/login"
-                      activeStyle={{
-                        fontWeight: "bold",
-                        color: "red",
-                      }}
-                    >
-                      Login
-                    </NavLink>
-                  )}
-                  <h4>{user?.displayName}</h4>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+        <Nav.Link className="" as={HashLink} to="/aboutUs">
+          About Us
+        </Nav.Link>
+
+        <Nav.Link className="" as={HashLink} to="/home#contactUs">
+          Contact
+        </Nav.Link>
+
+        <Nav.Link className="" as={HashLink} to="/home#products">
+          Products
+        </Nav.Link>
+
+        <Nav.Link className="" as={HashLink} to="/home#blogs">
+          Blogs
+        </Nav.Link>
+        {user?.email ? <>
+
+          <Nav.Link className="" as={HashLink} to="/dashboard">
+          Dashboard
+        </Nav.Link>
+        <button className="logout-btn" onClick={logOut}>Logout</button>
+        </> : <Nav.Link className="" as={HashLink} to="/login">
+        Login
+        </Nav.Link>}
+        <span className="ps-2">{user?.displayName}</span>
+
+        
+        
+      </Navbar.Collapse>
+    </Container>
+  </Navbar>
   );
 };
 

@@ -10,12 +10,12 @@ const Offer = () => {
             <Row className="pt-5">
                 <Col md={4} className="d-flex  text-start align-items-center">
                     <div >
-                        <h5 className="text-muted fs-4">For Summer </h5>
-                        <h1> <span className="text-muted">SALE UP</span> 40%</h1>
-                        <p className="mb-1"> <span><i className="far fa-check-circle text-warning fs-5 me-2"></i></span> With full custom accessories</p>
-                        <p className="mb-1"> <span><i className="far fa-check-circle text-warning fs-5 me-2"></i></span>  Power booster gamming GPS support</p>
-                        <p className="mb-1"> <span><i className="far fa-check-circle text-warning fs-5 me-2"></i></span>  Motion activated cameras</p>
-                        <p className="mb-1"> <span><i className="far fa-check-circle text-warning fs-5 me-2"></i></span> Line crossing, audio and face detection</p>
+                        <h5 className="text-black fs-4">For Summer </h5>
+                        <h2 className='text-black'> <span className="text-primary">SALE UP</span> 40%</h2>
+                        <p className="mb-1 text-black" > <span><i className="far fa-check-circle text-primary fs-5 me-2"></i></span> With full custom accessories</p>
+                        <p className="mb-1 text-black"> <span><i className="far fa-check-circle text-primary fs-5 me-2"></i></span>  Power booster gaming GPS support</p>
+                        <p className="mb-1 text-black"> <span><i className="far fa-check-circle text-primary fs-5 me-2"></i></span>  Motion activated cameras</p>
+                        <p className="mb-1 text-black"> <span><i className="far fa-check-circle text-primary fs-5 me-2"></i></span> Line crossing, audio and face detection</p>
                     </div>
                 </Col>
                 <Col md={8} className="">

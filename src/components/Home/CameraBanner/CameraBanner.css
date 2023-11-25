@@ -7,9 +7,16 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    margin-top:20px;
+    /* margin-top:20px; */
     margin-bottom:50px;
 }
 .ban-info{
-    margin-top: 50px;
+    padding-top: 50px;
+}
+
+
+@media only screen and (max-width: 786px) {
+    .ban-info{
+        padding-top: 0px;
+    }
 }

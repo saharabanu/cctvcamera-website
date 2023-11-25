@@ -17,18 +17,17 @@ const Dashboard = () => {
             <Row className="g-0  ">
                 <Col md={2} className="custom-dashboard-link" >
                     
-                    <hr className="custom-hr" />
                     <Nav className="flex-column pb-3">
                         <Link to="/home"> <span><i className="fas fa-house-user me-2"></i></span> Home</Link>
                         
-                            {!admin && <><h5 className='text-white'>Customer Dashboard</h5>
+                            {!admin && <><p className='text-white'>Customer Dashboard</p>
                             <Link to=""> <span><i className="fas fa-shopping-bag me-2"></i></span>Dashboard</Link>
                             
                             <Link to={`/dashboard/myOrders`}> <span><i className="fab fa-cc-amazon-pay me-2"></i></span> My Orders</Link>
                             <Link to={`/dashboard/payment`}> <span><i className="fab fa-cc-amazon-pay me-2"></i></span> Payment</Link>
                             <Link to={`/dashboard/review`}> <span><i className="fas fa-star-half-alt me-2"></i></span> Review</Link></>}
                        
-                           {admin && <> <h5 className="text-white">Admin Dashboard</h5>
+                           {admin && <> <p className="text-white">Admin Dashboard</p>
                                 <Link to={`/dashboard/allOrders`}> <span><i className="fas fa-shopping-cart me-2"></i></span> All Orders</Link>
                                 <Link to={`/dashboard/addProduct`}> <span><i className="fas fa-plus me-2"></i></span>Add Product</Link>
                                 <Link to={`/dashboard/makeAdmin`}> <span><i className="fas fa-user-cog me-2"></i></span> Make Admin </Link>
@@ -40,20 +39,20 @@ const Dashboard = () => {
                 </Col>
                 <Col md={10} className="dashboard-contain-bg">
 
-                    <Row className="g-0 dashboard-header ">
-                        <Navbar bg="white" expand="md">
-                            <Container>
-                                <h3 className="">Dashboard</h3>
-                                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                                <Navbar.Collapse id="basic-navbar-nav">
+                    <Row className="g-0 dashboard-header py-3">
+                       
+                           
+                                
+                               
+                               
                                     <Nav className="">
-                                        <span className="dasha"> <Image className="" src={photoURL} roundedCircle /> {displayName}</span>
-                                        <Button  variant="warning" onClick={logOut}  className="text-white dasha">Log Out </Button>
+                                        <span className=" px-3"> <Image className="dash-img" src={photoURL} roundedCircle /> {displayName}</span>
+                                        <Button onClick={logOut}  className="text-white customer-btn">Log Out </Button>
 
                                     </Nav>
-                                </Navbar.Collapse>
-                            </Container>
-                        </Navbar>
+                               
+                           
+                        
                         
                     </Row>
                     <Outlet></Outlet>

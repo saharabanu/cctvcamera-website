@@ -77,16 +77,18 @@
     
 }
 
-.blog-part{
+/* .blog-part{
     height:100%;
     
     background-color:wheat ;
     
-}
+} */
 .blog{
    
     text-align: start;
-    padding: 10px;
+    padding-top: 5px;
+    padding-left: 10px;
+    cursor: pointer;
 }
 .blog-head{
     margin-bottom: 50px;

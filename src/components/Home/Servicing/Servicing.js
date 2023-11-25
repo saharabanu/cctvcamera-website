@@ -7,7 +7,7 @@ const Servicing = () => {
         <Container className="my-5">
             <Row>
                 <Col>
-                    <h4 className="fs-3 my-3 ">  <span className="text-warning">WHY</span> CHOOSE US</h4>
+                    <h5 className="fs-5 my-2 ">  <span className="text-primary">WHY</span> CHOOSE US</h5>
 
                 </Col>
             </Row>
@@ -16,7 +16,7 @@ const Servicing = () => {
 
 
                 <Col >
-                    <Card className="border-0 shadow-lg mb-2">
+                    <Card className="border-0 shadow-lg mb-2 service-card">
                         <Card.Body>
                             <i className="fas fa-tools fs-1 mb-2"></i>
                             <Card.Title>Strong Service</Card.Title>
@@ -28,7 +28,7 @@ const Servicing = () => {
                     </Card>
                 </Col>
                 <Col>
-                    <Card className="border-0 shadow-lg mb-2">
+                    <Card className="border-0 shadow-lg mb-2 service-card">
                         <Card.Body>
                             <i className="fas fa-redo fs-1 mb-2"></i>
                             <Card.Title>Money back guarantee</Card.Title>
@@ -40,19 +40,19 @@ const Servicing = () => {
                     </Card>
                 </Col>
                 <Col>
-                    <Card className="border-0 shadow-lg mb-2">
+                    <Card className="border-0 shadow-lg mb-2 service-card">
                         <Card.Body>
                             <i className="far fa-life-ring fs-1 mb-2"></i>
                             <Card.Title>Support provide</Card.Title>
                             <Card.Text>
-                                Sales support systems were developed to assist the sales force in improving productivity. This improvement in productivity was through continuous.
+                                Sales support systems were developed to assist the sales force in improving productivity. This improvement in productivity was through continuous.was through continuous.
                             </Card.Text>
 
                         </Card.Body>
                     </Card>
                 </Col>
                 <Col>
-                    <Card className="border-0 shadow-lg mb-2">
+                    <Card className="border-0 shadow-lg mb-2 service-card">
                         <Card.Body>
                             <i className="fas fa-home fs-1 mb-2"></i>
                             <Card.Title>Home Service</Card.Title>
@@ -64,7 +64,7 @@ const Servicing = () => {
                     </Card>
                 </Col>
                 <Col>
-                    <Card className="border-0 shadow-lg mb-2">
+                    <Card className="border-0 shadow-lg mb-2 service-card">
                         <Card.Body>
                             <i className="fas fa-hammer fs-1 mb-2"></i>
                             <Card.Title>Accessories available</Card.Title>
@@ -76,7 +76,7 @@ const Servicing = () => {
                     </Card>
                 </Col>
                 <Col>
-                    <Card className="border-0 shadow-lg mb-2">
+                    <Card className="border-0 shadow-lg mb-2 service-card">
                         <Card.Body>
                             <i className="fas fa-map-marked-alt fs-1 mb-2"></i>
                             <Card.Title>GPS tracker</Card.Title>

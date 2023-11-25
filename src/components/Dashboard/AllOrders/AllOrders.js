@@ -61,9 +61,9 @@ const AllOrders = () => {
             <Container className="py-2 px-5">
 
                 <div className="text-start mt-3 ">
-                    <Button variant="light" className="mx-3 mb-4 fs-5" onClick={() => handleOrderCatagories("")}>All Orders</Button>
-                    <Button variant="light" className="mx-3 mb-4 fs-5" onClick={() => handleOrderCatagories("pending")}>Pending Orders</Button>
-                    <Button variant="light" className="mx-3 mb-4 fs-5" onClick={() => handleOrderCatagories("shipped")}>Shipped orders</Button>
+                    <Button variant="light" className="mx-3 mb-4 fs-5" onClick={() => handleOrderCatagories("")}>All Orders <sup className='text-primary'>{allOrders.length}</sup></Button>
+                    <Button variant="light" className="mx-3 mb-4 fs-5" onClick={() => handleOrderCatagories("pending")}>Pending Orders <sup className='text-primary'></sup></Button>
+                    <Button variant="light" className="mx-3 mb-4 fs-5" onClick={() => handleOrderCatagories("shipped")}>Shipped orders <sup className='text-primary'></sup></Button>
                 </div>
                 <Row className="heading g-0 py-3">
                     <Col md={3} xs={6}><h3 className="mb-0 fs-5">Customer Name & Email</h3></Col>
@@ -98,7 +98,7 @@ const AllOrders = () => {
                 </Modal.Header>
                 <Modal.Body>
                     <form onSubmit={handleSubmit(handleStatusUpdate)}>
-                        <h2 className="fs-3 pb-3">Product :{orderUpdate.productName}</h2>
+                        <p className=" pb-3">Product :{orderUpdate.productName}</p>
                         <label className="me-3 fs-5 pb-3">Status : </label>
                         <select {...register("Status")} className="p-1 fs-5">
                             <option value="pending">Pending</option>

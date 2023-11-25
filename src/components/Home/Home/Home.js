@@ -14,11 +14,17 @@ import Products from '../Products/Products';
 import Reviews from '../Reviews/Reviews';
 import Servicing from '../Servicing/Servicing';
 
+
+
+
+
+
 // #FFEBCD
 const Home = () => {
     return (
-        <div style={{backgroundColor:'black'}}>
+        <div >
             <Header></Header>
+            
             <Banner></Banner>
            <AllFeatures></AllFeatures>
            <CameraBanner></CameraBanner>

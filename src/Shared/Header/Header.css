@@ -1,33 +1,20 @@
-.header-container{
-    /* background-color:dark; */
-    color:white;
-    /* padding:5px; */
+.header-name img{
+    width: 200px;
+    height: 50px;
+    
 }
-.header-items{
-    list-style: none;
-    margin: 5px;
-    padding:0 3px;
-    font-size: 20px;
+.header-nav a{
+    color: black;
+    transition: 0.5s all ease-in-out;
 }
-.nav-items{
-    position:sticky;
-    top:0;
-    overflow: hidden;
+.logout-btn{
+    border: none;
+    background-color: transparent;
+    border:  1px solid #168EEA;
+    border-radius: 5px;
+    padding: 2px 5px;
 }
-.header-items-hash{
-    font-size: 20px;
-    padding: 3px 7px;
-}
-.menu-items a{
-    text-decoration: none;
-    color:white;
-    display: inline-block;
-   float: left;
-}
-.menu-items a:hover{
-    /* background-color: #ff9f1c; */
-    color:#0DCAF0;
-}
+
 
 
 

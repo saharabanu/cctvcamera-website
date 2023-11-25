@@ -1,51 +1,38 @@
-.dashboard-bg{
+.dashboard-bg {
     background-color: #313A46;
     height: 100vh;
-    }
-    .dashboard-contain-bg{
-    background-color: #F8F9FA;
-    /* background-image: url('https://5.imimg.com/data5/QQ/BI/LA/SELLER-13603641/cctv-hd-camera-500x500.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; */
-    /* opacity: 11111; */
+}
+
+.dashboard-contain-bg {
+    background-color: #F2F2F2;
+
     height: 100vh;
-    }
-    .custom-dashboard-link a{
+}
+
+.custom-dashboard-link a {
     color: rgb(255, 255, 255);
     text-decoration: none;
     padding-left: 30px;
     padding-top: 5px;
     text-align: left;
-    }
-    .custom-dashboard-link a:hover{
+}
+
+.custom-dashboard-link a:hover {
     color: #0DCAF0;
-    }
-    .title-dashboard{
-        color: rgb(255, 255, 255);
-        padding-top:30px ;
-        font-size: 30px;
-        line-height: 35px;
-        text-align: left;
-        padding-left:30px ;
-        cursor: pointer;
-    }
-    .custom-hr{
-        color: goldenrod;
-        width: 80%;
-        margin: 5px auto;
-      border: 2px double #0DCAF0;
-    }
-    .dashboard-header{
-        /* height: 80px; */
-       padding-left: 50px;
-        /* padding-top: 30px; */
-        
-        text-align: left;
-        background-color: white;
-        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-      
-    }
-    .dasha{
-        padding: 1px;
-    }
+}
+
+.dashboard-header {
+    
+    padding-left: 50px;
+    
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+}
+.dash-img{
+    width:40px;
+}
+
+/* .dasha {
+    padding: 1px;
+} */

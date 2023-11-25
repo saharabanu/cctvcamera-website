@@ -26,7 +26,7 @@ const Login = () => {
             
             <div className=" d-flex justify-content-center align-items-center rounded">
             <div className="input-box">
-            <h2 className=''>Please Login</h2>
+            <h4 className='text-primary'>Please Login</h4>
             { !isLoading && <form onSubmit={handleSubmit(onSubmit)}>
         
         <input
@@ -46,7 +46,7 @@ const Login = () => {
         />
         <br />
         <input
-          className="submit-btn btn btn-danger  input-field"
+          className="submit-btn btn btn-primary  input-field"
           type="submit"
           value="Login"
         />
@@ -55,11 +55,11 @@ const Login = () => {
       {user?.email && <Alert
       variant="success">Create user successfully</Alert>}
       {error && <Alert variant="danger">User email or password does not match</Alert>}
-      <p className="fw-bold">Are You New User?<Link to='/register'>Please Register</Link></p>
+      <p className="">Are You New User?<Link to='/register'>Please Register</Link> or <Link to="/">Back Home</Link></p>
 
 
       <div>-----------Social Media-----------------</div>
-      <button onClick={handleGoogleSignIn} className="btn btn-warning input-field fw-bold mt-2"> Google SignIn</button>
+      <button onClick={handleGoogleSignIn} className="btn btn-secondary input-field fw-bold mt-2"> Google SignIn</button>
 
         </div>
             </div>

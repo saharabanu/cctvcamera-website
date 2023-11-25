@@ -1,7 +1,31 @@
 import React from 'react';
 import './Brands.css';
 
+
+
+
+
 const Brands = () => {
+
+    const breakpoints = {
+    
+        480: {
+            slidesPerView: 3,
+           spaceBetween: 3,
+          },
+        576: {
+            slidesPerView: 3,
+           spaceBetween: 3,
+          },
+          786: {
+         slidesPerView: 5,
+            spaceBetween: 3,
+         },
+          1024: {
+          slidesPerView: 6,
+            spaceBetween: 3,
+           },
+         }
 
     
     
@@ -9,18 +33,21 @@ const Brands = () => {
         <div style={{marginBottom:'100px'}}>
             <div className='container'>
                 <div style={{marginTop:'-50px'}}>
-                <iframe className='w-75 h-100'  src="https://www.youtube.com/embed/6-9S3C_PSoY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe className='w-75 h-100' src="https://www.youtube.com/embed/YfBwEaAKLTI?si=477ke_bj04gozNee" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                {/* <iframe className='w-75 h-100'  src="https://www.youtube.com/embed/6-9S3C_PSoY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
 
                 </div>
-                <div className='row g-4 text-start'>
+                {/* <div className='row g-4 text-start'>
                     <div className='col-md-4'>
                         <h4 className='p-5'> <span className='text-white'>CCTV Cameras And Security Camera Systems For </span> <span style={{color:'#b22222'}}> Home Surveillance Applications.</span> </h4>
                     </div>
                     <div className='col-md-8'>
                         <p className='text-white p-5'>Our Security is a leading security systems company based in New York City. We specialize in planning and design, installation, repair and maintenance of full range security systems for business & commercial properties, residential buildings and industrial facilities throughout all five boroughs.</p>
                     </div>
-                </div>
-                <div className="row g-4">
+                </div> */}
+                <div className="row g-4 mt-4">
+
+                
                     <div className="col-md-2">
                         <div className="brand-img" data-aos="flip-left"
                             data-aos-easing="ease-out-cubic"

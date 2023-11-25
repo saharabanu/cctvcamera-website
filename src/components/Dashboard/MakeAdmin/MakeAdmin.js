@@ -31,8 +31,8 @@ const MakeAdmin = () => {
         reset()
       };
     return (
-        <div>
-        <h1>Make Admin</h1>
+        <div className='py-5'>
+        <h3 className='text-primary pb-3'>Make Admin</h3>
         <form onSubmit={handleSubmit(onSubmit)}>
           <input
             className="input-field w-25"
@@ -44,7 +44,7 @@ const MakeAdmin = () => {
           <br />
   
           <input
-            className="submit-btn btn btn-danger mt-3 border-0 w-25"
+            className="submit-btn btn btn-primary mt-3 border-0 w-25"
             type="submit"
             value="Make as Admin"
           />

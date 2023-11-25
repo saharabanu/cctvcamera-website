@@ -19,13 +19,13 @@ const AddProduct = () => {
             if(data.insertedId){
                 alert('product added successfully')
             }
-            console.log(data)
+            // console.log(data)
             reset();
         })
     }
     return (
-        <div className="add-service">
-            <h2>Add A Product</h2>
+        <div className="add-service pt-4">
+            <h4 className='text-primary'>Add A Product</h4>
             <form onSubmit={handleSubmit(onSubmit)} className="dashboard-from ms-3">
 
                         <input placeholder="Product Name" type="text" {...register("name", { required: true })} />
@@ -36,7 +36,7 @@ const AddProduct = () => {
                         <input placeholder="Size like large ,small" type="text" {...register("size", { required: true })} />
                         
 
-                        <Button  className="add-button"type="submit" variant="dark">Add Product</Button>
+                        <Button  className="add-button"type="submit" >Add Product</Button>
                     </form>
         </div>
     );

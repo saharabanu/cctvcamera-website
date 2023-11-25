@@ -13,8 +13,8 @@ const CameraBanner = () => {
                     </div>
                     <div className="col-md-6">
                         <div className='text-start ban-info '>
-                            <h3>
-                                We Will Make Your Home <br /> And Business <span className='text-danger'>Completely <br /> Safe.</span></h3>
+                            <h4>
+                                We Will Make Your Home <br /> And Business <span className='text-primary'>Completely <br /> Safe.</span></h4>
                             <p>We believe in the value that our functions add to a business. We feel that this specialist part of HR is often unrecognised for its contribution to the profitability and success of a business.</p>
                         </div>
                     </div>

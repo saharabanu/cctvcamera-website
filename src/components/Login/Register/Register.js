@@ -29,11 +29,11 @@ const Register = () => {
         <div className=" container">
           <div className="d-flex justify-content-center align-items-center rounded">
         <div className="input-box text-center">
-      <h2>Please Register</h2>
+      <h4 className='text-primary'>Please Register</h4>
       {!isLoading && <form onSubmit={handleSubmit(onSubmit)}>
   <input
     className="input-field mb-3"
-    name="namet"
+    name="name"
     placeholder="Your Name"
     type="text"
     
@@ -69,7 +69,7 @@ const Register = () => {
   <br />
 
   <input
-    className="submit-btn btn btn-danger input-field"
+    className="submit-btn btn btn-primary input-field"
     type="submit"
     value="Register"
   />
@@ -77,7 +77,7 @@ const Register = () => {
 {isLoading && <Spinner animation="border" variant="danger" />}
 {user?.email && <Alert variant="success">Create user successfully</Alert>}
 {error && <Alert variant="danger">User id does not match</Alert>}
-<p className="fw-bold">Already Have an Account?<Link to='/login'>Please Login</Link></p>
+<p className="">Already Have an Account?<Link to='/login'>Please Login</Link> or <Link to="/">Back Home</Link></p>
 
   </div>
   </div>

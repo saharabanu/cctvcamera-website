@@ -14,7 +14,7 @@ const Reviews = () => {
         <Container className="my-5">
             <Row>
                 <Col>
-                    <h4 className="fs-3 my-3">  <span className="text-warning">REVIEWS</span> <span style={{color:'#b22222'}} >FROM CLIENT</span> </h4>
+                    <h6 className="fs-5 my-3">  <span className="text-primary">REVIEWS</span> <span  >FROM CLIENT</span> </h6>
 
 
                 </Col>
@@ -28,8 +28,8 @@ const Reviews = () => {
                             <Card.Title>{review.name}</Card.Title>
                             <p className=" mb-1 fs-5">     <Rating
                                 initialRating={review.rating}
-                                emptySymbol="far fa-star text-warning"
-                                fullSymbol="fas fa-star text-warning"
+                                emptySymbol="far fa-star text-primary"
+                                fullSymbol="fas fa-star text-primary"
                                 readonly></Rating></p>
                             <Card.Text>
                                 {review.description}

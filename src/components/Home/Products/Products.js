@@ -17,7 +17,7 @@ const Products = () => {
 <Container id="products" className="my-5">
             <Row>
                 <Col>
-                    <h4 className="fs-3 my-3"><span className="text-warning">FEATURED PRODUCTS</span></h4>
+                    <h5 className="fs-4 my-3"><span className="text-primary">FEATURED PRODUCTS</span></h5>
 
                 </Col>
             </Row>
@@ -26,12 +26,12 @@ const Products = () => {
                 {products.length ? products.map(product => <Col
                     key={product._id}>
                     <Card className="bg-light product-background">
-                        <Card.Img variant="top" src={product.img} className="px-5 pt-3 product-img" style={{ height: "200px" }} />
-                        <Card.Body>
+                        <Card.Img variant="top" src={product.img} className="px-5 pt-3 product-img" style={{ height: "250px" }} />
+                        <Card.Body className='text-start px-5'>
                             <Card.Title>{product.name}</Card.Title>
                             <p className="fs-5 mb-0">Price : <span className="fw-bold">$ {product.price} </span> </p>
                             
-                            <Link to={`/details/${product._id}`}><Button variant="dark" >Buy Now</Button></Link>
+                            <Link to={`/details/${product._id}`}><Button className='btn common-btn mt-1'  >Buy Now</Button></Link>
                         </Card.Body>
 
                     </Card>
