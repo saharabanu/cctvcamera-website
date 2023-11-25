@@ -1,0 +1,73 @@
+[debug] [2023-11-25T08:57:22.052Z] ----------------------------------------------------------------------
+[debug] [2023-11-25T08:57:22.057Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\MS\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-11-25T08:57:22.058Z] CLI Version:   11.6.0
+[debug] [2023-11-25T08:57:22.059Z] Platform:      win32
+[debug] [2023-11-25T08:57:22.059Z] Node Version:  v16.15.1
+[debug] [2023-11-25T08:57:22.066Z] Time:          Sat Nov 25 2023 14:57:22 GMT+0600 (Bangladesh Standard Time)
+[debug] [2023-11-25T08:57:22.067Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-11-25T08:57:22.075Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2023-11-25T08:57:22.262Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-11-25T08:57:22.263Z] > authorizing via signed-in user (saharabanungn@gmail.com)
+[debug] [2023-11-25T08:57:22.263Z] [iam] checking project cctv-camera-ee776 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-11-25T08:57:22.266Z] > refreshing access token with scopes: []
+[debug] [2023-11-25T08:57:22.268Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-11-25T08:57:22.268Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-11-25T08:57:22.892Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2023-11-25T08:57:22.892Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-11-25T08:57:22.893Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/cctv-camera-ee776:testIamPermissions [none]
+[debug] [2023-11-25T08:57:22.894Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/cctv-camera-ee776:testIamPermissions x-goog-quota-user=projects/cctv-camera-ee776
+[debug] [2023-11-25T08:57:22.895Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/cctv-camera-ee776:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-11-25T08:57:23.016Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2023-11-25T08:57:23.017Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2023-11-25T08:57:24.755Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/cctv-camera-ee776:testIamPermissions 401
+[debug] [2023-11-25T08:57:24.756Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/cctv-camera-ee776:testIamPermissions {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"ACCESS_TOKEN_TYPE_UNSUPPORTED","metadata":{"method":"google.cloudresourcemanager.v1.Projects.TestIamPermissions","service":"cloudresourcemanager.googleapis.com"}}]}}
+[debug] [2023-11-25T08:57:24.762Z] [iam] error while checking permissions, command may fail: FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2023-11-25T08:57:24.765Z] > refreshing access token with scopes: []
+[debug] [2023-11-25T08:57:24.767Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-11-25T08:57:24.768Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-11-25T08:57:25.106Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2023-11-25T08:57:25.106Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-11-25T08:57:25.110Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/cctv-camera-ee776 [none]
+[debug] [2023-11-25T08:57:25.676Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/cctv-camera-ee776 401
+[debug] [2023-11-25T08:57:25.676Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/cctv-camera-ee776 {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED"}}
+[debug] [2023-11-25T08:57:25.677Z] HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2023-11-25T08:57:26.082Z] FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+    at responseToError (C:\Users\MS\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:49:12)
+    at RetryOperation._fn (C:\Users\MS\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:288:77)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[error] 
+[error] Error: Failed to get Firebase project cctv-camera-ee776. Please make sure the project exists and your account has permission to access it.
+[debug] [2023-11-25T08:59:51.434Z] ----------------------------------------------------------------------
+[debug] [2023-11-25T08:59:51.439Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\MS\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-11-25T08:59:51.441Z] CLI Version:   12.9.1
+[debug] [2023-11-25T08:59:51.441Z] Platform:      win32
+[debug] [2023-11-25T08:59:51.442Z] Node Version:  v16.15.1
+[debug] [2023-11-25T08:59:51.444Z] Time:          Sat Nov 25 2023 14:59:51 GMT+0600 (Bangladesh Standard Time)
+[debug] [2023-11-25T08:59:51.445Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-11-25T08:59:51.599Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-11-25T08:59:51.600Z] > authorizing via signed-in user (saharabanungn@gmail.com)
+[debug] [2023-11-25T08:59:51.601Z] [iam] checking project cctv-camera-ee776 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-11-25T08:59:51.604Z] > refreshing access token with scopes: []
+[debug] [2023-11-25T08:59:51.607Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-11-25T08:59:51.607Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-11-25T08:59:52.054Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2023-11-25T08:59:52.055Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-11-25T08:59:52.055Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/cctv-camera-ee776:testIamPermissions [none]
+[debug] [2023-11-25T08:59:52.056Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/cctv-camera-ee776:testIamPermissions x-goog-quota-user=projects/cctv-camera-ee776
+[debug] [2023-11-25T08:59:52.056Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/cctv-camera-ee776:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-11-25T08:59:53.649Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/cctv-camera-ee776:testIamPermissions 401
+[debug] [2023-11-25T08:59:53.650Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/cctv-camera-ee776:testIamPermissions {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"ACCESS_TOKEN_TYPE_UNSUPPORTED","metadata":{"service":"cloudresourcemanager.googleapis.com","method":"google.cloudresourcemanager.v1.Projects.TestIamPermissions"}}]}}
+[debug] [2023-11-25T08:59:53.653Z] [iam] error while checking permissions, command may fail: FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2023-11-25T08:59:53.656Z] > refreshing access token with scopes: []
+[debug] [2023-11-25T08:59:53.657Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-11-25T08:59:53.657Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-11-25T08:59:53.990Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2023-11-25T08:59:53.991Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-11-25T08:59:53.994Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/cctv-camera-ee776 [none]
+[debug] [2023-11-25T08:59:55.102Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/cctv-camera-ee776 401
+[debug] [2023-11-25T08:59:55.103Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/cctv-camera-ee776 {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED"}}
+[debug] [2023-11-25T08:59:55.104Z] HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[error] 
+[error] Error: Assertion failed: resolving hosting target of a site with no site name or target name. This should have caused an error earlier
